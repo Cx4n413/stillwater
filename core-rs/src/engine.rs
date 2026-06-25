@@ -2032,6 +2032,63 @@ impl Core {
         out
     }
 
+    /// READ-ONLY introspection for the SMAB premise gate: walk the principal
+    /// variation starting at the root move `root_move_uci` (the best-child
+    /// chain, descending the max-q child each ply) up to `max_depth` plies, and
+    /// return per ply (best_q, second_q, n_expanded) where q = -g*child.value is
+    /// EXACTLY the quantity backup ranks on (same zeroing/GAMMA convention).
+    /// second_q is NaN when fewer than 2 children are expanded. Does not mutate
+    /// anything; the lattice and its behavior are untouched.
+    pub fn pv_child_gaps(&self, root_move_uci: &str, max_depth: usize)
+        -> Vec<(f64, f64, i64)>
+    {
+        let mut out = Vec::new();
+        let root = match self.nodes.get(&self.root_key) {
+            Some(n) => n,
+            None => return out,
+        };
+        let mut key = None;
+        for (i, m) in root.moves.iter().enumerate() {
+            if m.to_uci(CastlingMode::Standard).to_string() == root_move_uci {
+                key = root.child_keys[i];
+                break;
+            }
+        }
+        let mut key = match key {
+            Some(k) => k,
+            None => return out,
+        };
+        for _ in 0..max_depth {
+            let node = match self.nodes.get(&key) {
+                Some(n) => n,
+                None => break,
+            };
+            if node.proof || node.moves.is_empty() {
+                break;
+            }
+            let mut qs: Vec<(f64, u64)> = Vec::new();
+            for (idx, ck) in node.child_keys.iter().enumerate() {
+                if let Some(c) = ck.and_then(|k| self.nodes.get(&k)) {
+                    let g = if self.r(R_GAMMA) && node.moves[idx].is_zeroing() {
+                        1.0
+                    } else {
+                        GAMMA
+                    };
+                    qs.push((-g * c.value, ck.unwrap()));
+                }
+            }
+            if qs.is_empty() {
+                break;
+            }
+            qs.sort_by(|a, b| b.0.total_cmp(&a.0));
+            let best_q = qs[0].0;
+            let second_q = if qs.len() >= 2 { qs[1].0 } else { f64::NAN };
+            out.push((best_q, second_q, qs.len() as i64));
+            key = qs[0].1;
+        }
+        out
+    }
+
     /// Structure lever: clean per-root-edge visit counts, aligned index-for-
     /// index with children_of(root_key) / root_children() (same expanded-only
     /// filter), so the Python readout can zip vis[i] with scored[i].

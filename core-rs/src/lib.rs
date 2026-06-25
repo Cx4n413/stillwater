@@ -184,6 +184,15 @@ impl Core {
         self.inner.children_of(key)
     }
 
+    /// READ-ONLY: per-ply (best_q, second_q, n_expanded) down the PV from a
+    /// root move, for the SMAB singularity premise gate. second_q is NaN when
+    /// <2 children expanded. Does not mutate the lattice.
+    fn pv_child_gaps(&self, root_move_uci: String, max_depth: usize)
+        -> Vec<(f64, f64, i64)>
+    {
+        self.inner.pv_child_gaps(&root_move_uci, max_depth)
+    }
+
     /// (uci, prior, expanded) for every root move (court phantom-arm data).
     fn root_moves(&self) -> Vec<(String, f32, bool)> {
         self.inner.root_moves_with_priors()
