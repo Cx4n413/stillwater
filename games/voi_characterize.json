@@ -1,0 +1,2937 @@
+{
+ "nodes": 4000,
+ "agree_rate": 0.5,
+ "puct_deterministic": true,
+ "pooled_puct": {
+  "mean_eff_branching": 3.17,
+  "mean_top1_share": 0.514,
+  "mean_entropy": 1.514,
+  "mean_rho_close_vs_share": 0.825,
+  "mean_rho_prior_vs_share": 0.783
+ },
+ "pooled_voi": {
+  "mean_eff_branching": 4.67,
+  "mean_top1_share": 0.407,
+  "mean_entropy": 1.84,
+  "mean_rho_close_vs_share": 0.651,
+  "mean_rho_prior_vs_share": 0.697
+ },
+ "positions": [
+  {
+   "name": "start",
+   "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+   "agree": true,
+   "puct_deterministic": true,
+   "puct_best": "d2d4",
+   "voi_best": "d2d4",
+   "puct": {
+    "total_evals": 4095,
+    "moves": 20,
+    "eff_branching@5%": 5,
+    "top1_share": 0.338,
+    "entropy": 1.945,
+    "rho_closeness_vs_evalshare": 0.987,
+    "rho_prior_vs_evalshare": 0.995,
+    "alloc_follows_value": 0,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 1
+   },
+   "voi": {
+    "total_evals": 4116,
+    "moves": 20,
+    "eff_branching@5%": 11,
+    "top1_share": 0.132,
+    "entropy": 2.559,
+    "rho_closeness_vs_evalshare": 0.691,
+    "rho_prior_vs_evalshare": 0.861,
+    "alloc_follows_value": 0,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 0
+   },
+   "puct_rows": [
+    {
+     "uci": "d2d4",
+     "q": 0.0808,
+     "evals": 1384,
+     "proof": false
+    },
+    {
+     "uci": "g1f3",
+     "q": 0.081,
+     "evals": 1218,
+     "proof": false
+    },
+    {
+     "uci": "c2c4",
+     "q": 0.0357,
+     "evals": 315,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": 0.028,
+     "evals": 256,
+     "proof": false
+    },
+    {
+     "uci": "e2e4",
+     "q": 0.0373,
+     "evals": 222,
+     "proof": false
+    },
+    {
+     "uci": "e2e3",
+     "q": 0.0051,
+     "evals": 148,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": 0.0021,
+     "evals": 107,
+     "proof": false
+    },
+    {
+     "uci": "b1c3",
+     "q": -0.0007,
+     "evals": 107,
+     "proof": false
+    },
+    {
+     "uci": "c2c3",
+     "q": -0.0057,
+     "evals": 74,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.0189,
+     "evals": 63,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.0171,
+     "evals": 60,
+     "proof": false
+    },
+    {
+     "uci": "d2d3",
+     "q": -0.0338,
+     "evals": 45,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.0507,
+     "evals": 29,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.0678,
+     "evals": 22,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": -0.0912,
+     "evals": 16,
+     "proof": false
+    },
+    {
+     "uci": "g1h3",
+     "q": -0.198,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.1401,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "b1a3",
+     "q": -0.194,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "f2f3",
+     "q": -0.2746,
+     "evals": 5,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.4876,
+     "evals": 2,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "e2e3",
+     "q": -0.1082,
+     "evals": 544,
+     "proof": false
+    },
+    {
+     "uci": "g1f3",
+     "q": -0.0105,
+     "evals": 477,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": 0.0117,
+     "evals": 402,
+     "proof": false
+    },
+    {
+     "uci": "d2d3",
+     "q": 0.0061,
+     "evals": 360,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": 0.0238,
+     "evals": 340,
+     "proof": false
+    },
+    {
+     "uci": "d2d4",
+     "q": 0.0622,
+     "evals": 334,
+     "proof": false
+    },
+    {
+     "uci": "c2c4",
+     "q": 0.0289,
+     "evals": 313,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.0109,
+     "evals": 290,
+     "proof": false
+    },
+    {
+     "uci": "e2e4",
+     "q": 0.0329,
+     "evals": 246,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.0377,
+     "evals": 241,
+     "proof": false
+    },
+    {
+     "uci": "b1c3",
+     "q": 0.0081,
+     "evals": 213,
+     "proof": false
+    },
+    {
+     "uci": "c2c3",
+     "q": -0.3317,
+     "evals": 187,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.5645,
+     "evals": 71,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.0933,
+     "evals": 67,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": -0.1344,
+     "evals": 24,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.152,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "f2f3",
+     "q": -0.2777,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.4723,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b1a3",
+     "q": -0.1991,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h3",
+     "q": -0.1795,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  },
+  {
+   "name": "WAC.001 mate-ish tactic",
+   "fen": "2rr3k/pp3pp1/1nnqbN1p/3pN3/2pP4/2P3Q1/PPB4P/R4RK1 w - - 0 1",
+   "agree": true,
+   "puct_deterministic": true,
+   "puct_best": "g3g6",
+   "voi_best": "g3g6",
+   "puct": {
+    "total_evals": 466,
+    "moves": 59,
+    "eff_branching@5%": 2,
+    "top1_share": 0.502,
+    "entropy": 1.611,
+    "rho_closeness_vs_evalshare": 0.286,
+    "rho_prior_vs_evalshare": 0.435,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 1
+   },
+   "voi": {
+    "total_evals": 267,
+    "moves": 59,
+    "eff_branching@5%": 2,
+    "top1_share": 0.607,
+    "entropy": 1.817,
+    "rho_closeness_vs_evalshare": 0.381,
+    "rho_prior_vs_evalshare": 0.367,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 1
+   },
+   "puct_rows": [
+    {
+     "uci": "g3g6",
+     "q": 1.0,
+     "evals": 234,
+     "proof": true
+    },
+    {
+     "uci": "f6h5",
+     "q": 0.9923,
+     "evals": 154,
+     "proof": false
+    },
+    {
+     "uci": "f6e8",
+     "q": 0.4996,
+     "evals": 18,
+     "proof": false
+    },
+    {
+     "uci": "e5g6",
+     "q": -0.9814,
+     "evals": 5,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.8495,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.8516,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.795,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.8553,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.7521,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.8073,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5d3",
+     "q": -0.9946,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5f3",
+     "q": -0.9941,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5c4",
+     "q": -0.9956,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5g4",
+     "q": -0.9892,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5c6",
+     "q": -0.9709,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5d7",
+     "q": -0.9956,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5f7",
+     "q": -0.5468,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6e4",
+     "q": 0.2995,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6g4",
+     "q": 0.2749,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6d5",
+     "q": -0.9503,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6d7",
+     "q": -0.328,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6h7",
+     "q": -0.9331,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6g8",
+     "q": -0.9828,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2b1",
+     "q": -0.9494,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2d1",
+     "q": -0.9425,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2b3",
+     "q": -0.9874,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2d3",
+     "q": -0.9784,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2a4",
+     "q": -0.9698,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2e4",
+     "q": -0.9796,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2f5",
+     "q": -0.7827,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2g6",
+     "q": -0.9825,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2h7",
+     "q": -0.9647,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": -0.8318,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1c1",
+     "q": -0.8375,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1d1",
+     "q": -0.4252,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1e1",
+     "q": 0.2058,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1b1",
+     "q": -0.968,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1c1",
+     "q": -0.9709,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1d1",
+     "q": -0.9643,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1e1",
+     "q": -0.9213,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f2",
+     "q": -0.198,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f3",
+     "q": -0.6229,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f4",
+     "q": -0.7529,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f5",
+     "q": -0.6912,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3e1",
+     "q": -0.9116,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f2",
+     "q": -0.9907,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g2",
+     "q": -0.9676,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3d3",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3e3",
+     "q": -0.946,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f3",
+     "q": -0.9886,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3h3",
+     "q": -0.9934,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f4",
+     "q": -0.5802,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g4",
+     "q": -0.994,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3h4",
+     "q": -0.8656,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g5",
+     "q": -0.9985,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g7",
+     "q": -0.9971,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": 0.0542,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1f2",
+     "q": -0.8001,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1g2",
+     "q": -0.8557,
+     "evals": 1,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "g3g6",
+     "q": 0.997,
+     "evals": 162,
+     "proof": true
+    },
+    {
+     "uci": "f6h5",
+     "q": 0.9935,
+     "evals": 47,
+     "proof": false
+    },
+    {
+     "uci": "f6e8",
+     "q": 0.5299,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.8495,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.8516,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.795,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.8553,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.7521,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.8073,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5d3",
+     "q": -0.9946,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5f3",
+     "q": -0.9941,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5c4",
+     "q": -0.9956,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5g4",
+     "q": -0.9892,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5c6",
+     "q": -0.9709,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5g6",
+     "q": 0.4186,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5d7",
+     "q": -0.9956,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e5f7",
+     "q": -0.5468,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6e4",
+     "q": 0.2995,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6g4",
+     "q": 0.2749,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6d5",
+     "q": -0.9503,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6d7",
+     "q": -0.328,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6h7",
+     "q": -0.9331,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f6g8",
+     "q": -0.9828,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2b1",
+     "q": -0.9494,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2d1",
+     "q": -0.9425,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2b3",
+     "q": -0.9874,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2d3",
+     "q": -0.9784,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2a4",
+     "q": -0.9698,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2e4",
+     "q": -0.9796,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2f5",
+     "q": -0.7827,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2g6",
+     "q": -0.9825,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2h7",
+     "q": -0.9647,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": -0.8318,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1c1",
+     "q": -0.8375,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1d1",
+     "q": -0.4252,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1e1",
+     "q": 0.2058,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1b1",
+     "q": -0.968,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1c1",
+     "q": -0.9709,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1d1",
+     "q": -0.9643,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1e1",
+     "q": -0.9213,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f2",
+     "q": -0.198,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f3",
+     "q": -0.6229,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f4",
+     "q": -0.7529,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1f5",
+     "q": -0.6912,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3e1",
+     "q": -0.9116,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f2",
+     "q": -0.9907,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g2",
+     "q": -0.9676,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3d3",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3e3",
+     "q": -0.946,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f3",
+     "q": -0.9886,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3h3",
+     "q": -0.9934,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3f4",
+     "q": -0.5802,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g4",
+     "q": -0.994,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3h4",
+     "q": -0.8656,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g5",
+     "q": -0.9985,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g3g7",
+     "q": -0.9971,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": 0.0542,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1f2",
+     "q": -0.8001,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1g2",
+     "q": -0.8557,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  },
+  {
+   "name": "quiet QGD middlegame",
+   "fen": "r1bq1rk1/pp1nbppp/2p1pn2/3p4/2PP4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 0 9",
+   "agree": false,
+   "puct_deterministic": true,
+   "puct_best": "b2b3",
+   "voi_best": "e3e4",
+   "puct": {
+    "total_evals": 4098,
+    "moves": 39,
+    "eff_branching@5%": 3,
+    "top1_share": 0.44,
+    "entropy": 1.797,
+    "rho_closeness_vs_evalshare": 0.905,
+    "rho_prior_vs_evalshare": 0.851,
+    "alloc_follows_value": 0,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 1
+   },
+   "voi": {
+    "total_evals": 4007,
+    "moves": 39,
+    "eff_branching@5%": 5,
+    "top1_share": 0.25,
+    "entropy": 2.317,
+    "rho_closeness_vs_evalshare": 0.721,
+    "rho_prior_vs_evalshare": 0.723,
+    "alloc_follows_value": 0,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 1
+   },
+   "puct_rows": [
+    {
+     "uci": "f1d1",
+     "q": 0.1572,
+     "evals": 1804,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": 0.2395,
+     "evals": 908,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": 0.1753,
+     "evals": 615,
+     "proof": false
+    },
+    {
+     "uci": "e3e4",
+     "q": -0.0493,
+     "evals": 124,
+     "proof": false
+    },
+    {
+     "uci": "f1e1",
+     "q": 0.1141,
+     "evals": 116,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": 0.1361,
+     "evals": 106,
+     "proof": false
+    },
+    {
+     "uci": "e2d3",
+     "q": 0.164,
+     "evals": 87,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": 0.0855,
+     "evals": 86,
+     "proof": false
+    },
+    {
+     "uci": "c1d2",
+     "q": 0.148,
+     "evals": 43,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": 0.0927,
+     "evals": 34,
+     "proof": false
+    },
+    {
+     "uci": "f3e5",
+     "q": 0.0275,
+     "evals": 15,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": 0.0573,
+     "evals": 14,
+     "proof": false
+    },
+    {
+     "uci": "f3d2",
+     "q": 0.0776,
+     "evals": 14,
+     "proof": false
+    },
+    {
+     "uci": "c2d1",
+     "q": -0.0031,
+     "evals": 12,
+     "proof": false
+    },
+    {
+     "uci": "c3d1",
+     "q": 0.011,
+     "evals": 11,
+     "proof": false
+    },
+    {
+     "uci": "f3e1",
+     "q": 0.0367,
+     "evals": 10,
+     "proof": false
+    },
+    {
+     "uci": "c2d3",
+     "q": 0.0704,
+     "evals": 10,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": 0.0215,
+     "evals": 10,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": 0.0192,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "c3b1",
+     "q": 0.0372,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "f3g5",
+     "q": -0.006,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "c2d2",
+     "q": 0.0311,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "c2b3",
+     "q": 0.0058,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "c2b1",
+     "q": 0.0114,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "c4c5",
+     "q": 0.0254,
+     "evals": 6,
+     "proof": false
+    },
+    {
+     "uci": "e2d1",
+     "q": -0.1077,
+     "evals": 4,
+     "proof": false
+    },
+    {
+     "uci": "c4d5",
+     "q": -0.1085,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "c3a4",
+     "q": -0.1787,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "f3h4",
+     "q": -0.205,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "c2a4",
+     "q": -0.1363,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.2011,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.3628,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e4",
+     "q": -0.9857,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b5",
+     "q": -0.9805,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d5",
+     "q": -0.9794,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2e4",
+     "q": -0.9964,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2f5",
+     "q": -0.9959,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2g6",
+     "q": -0.9945,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2h7",
+     "q": -0.9967,
+     "evals": 1,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "b2b3",
+     "q": 0.0979,
+     "evals": 1002,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": 0.1032,
+     "evals": 610,
+     "proof": false
+    },
+    {
+     "uci": "f1d1",
+     "q": -0.0102,
+     "evals": 529,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.0654,
+     "evals": 435,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": 0.1019,
+     "evals": 423,
+     "proof": false
+    },
+    {
+     "uci": "f1e1",
+     "q": -0.0246,
+     "evals": 174,
+     "proof": false
+    },
+    {
+     "uci": "c1d2",
+     "q": 0.0051,
+     "evals": 171,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": 0.1018,
+     "evals": 160,
+     "proof": false
+    },
+    {
+     "uci": "e3e4",
+     "q": 0.1754,
+     "evals": 129,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": 0.0158,
+     "evals": 124,
+     "proof": false
+    },
+    {
+     "uci": "e2d3",
+     "q": -0.9822,
+     "evals": 79,
+     "proof": false
+    },
+    {
+     "uci": "f3d2",
+     "q": -0.006,
+     "evals": 36,
+     "proof": false
+    },
+    {
+     "uci": "c2d3",
+     "q": -0.0198,
+     "evals": 32,
+     "proof": false
+    },
+    {
+     "uci": "f3e5",
+     "q": -0.1655,
+     "evals": 20,
+     "proof": false
+    },
+    {
+     "uci": "c2d2",
+     "q": 0.0166,
+     "evals": 17,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.0397,
+     "evals": 10,
+     "proof": false
+    },
+    {
+     "uci": "f3g5",
+     "q": -0.006,
+     "evals": 10,
+     "proof": false
+    },
+    {
+     "uci": "c2b3",
+     "q": -0.048,
+     "evals": 9,
+     "proof": false
+    },
+    {
+     "uci": "c2d1",
+     "q": -0.0145,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "c4d5",
+     "q": -0.1085,
+     "evals": 4,
+     "proof": false
+    },
+    {
+     "uci": "c4c5",
+     "q": -0.0171,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "c2b1",
+     "q": 0.0016,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.0106,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "c3a4",
+     "q": -0.1124,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.1954,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.3628,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b1",
+     "q": -0.0319,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d1",
+     "q": -0.0444,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e4",
+     "q": -0.9857,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b5",
+     "q": -0.9805,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d5",
+     "q": -0.9794,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f3e1",
+     "q": -0.0337,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f3h4",
+     "q": -0.0802,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e2d1",
+     "q": -0.2068,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2a4",
+     "q": -0.0958,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2e4",
+     "q": -0.9964,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2f5",
+     "q": -0.9959,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2g6",
+     "q": -0.9945,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c2h7",
+     "q": -0.9967,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  },
+  {
+   "name": "sharp Najdorf, several tries",
+   "fen": "rnbqkb1r/1p3ppp/p2ppn2/8/3NP3/2N1B3/PPP2PPP/R2QKB1R w KQkq - 0 7",
+   "agree": false,
+   "puct_deterministic": true,
+   "puct_best": "f2f3",
+   "voi_best": "d1d2",
+   "puct": {
+    "total_evals": 4020,
+    "moves": 46,
+    "eff_branching@5%": 4,
+    "top1_share": 0.389,
+    "entropy": 1.842,
+    "rho_closeness_vs_evalshare": 0.93,
+    "rho_prior_vs_evalshare": 0.809,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 0
+   },
+   "voi": {
+    "total_evals": 4114,
+    "moves": 46,
+    "eff_branching@5%": 5,
+    "top1_share": 0.296,
+    "entropy": 2.047,
+    "rho_closeness_vs_evalshare": 0.724,
+    "rho_prior_vs_evalshare": 0.793,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 1
+   },
+   "puct_rows": [
+    {
+     "uci": "f2f3",
+     "q": 0.2306,
+     "evals": 1564,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": 0.1752,
+     "evals": 1153,
+     "proof": false
+    },
+    {
+     "uci": "d1d2",
+     "q": 0.1919,
+     "evals": 410,
+     "proof": false
+    },
+    {
+     "uci": "f1e2",
+     "q": 0.192,
+     "evals": 206,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.1629,
+     "evals": 167,
+     "proof": false
+    },
+    {
+     "uci": "d1f3",
+     "q": 0.1295,
+     "evals": 104,
+     "proof": false
+    },
+    {
+     "uci": "d4b3",
+     "q": 0.1154,
+     "evals": 74,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": 0.0354,
+     "evals": 73,
+     "proof": false
+    },
+    {
+     "uci": "f1d3",
+     "q": 0.1401,
+     "evals": 69,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": 0.0563,
+     "evals": 40,
+     "proof": false
+    },
+    {
+     "uci": "h1g1",
+     "q": 0.0984,
+     "evals": 29,
+     "proof": false
+    },
+    {
+     "uci": "f1c4",
+     "q": 0.069,
+     "evals": 19,
+     "proof": false
+    },
+    {
+     "uci": "d1e2",
+     "q": 0.0408,
+     "evals": 19,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": 0.0597,
+     "evals": 18,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": 0.0319,
+     "evals": 13,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.0284,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "d4f3",
+     "q": -0.0559,
+     "evals": 5,
+     "proof": false
+    },
+    {
+     "uci": "e3d2",
+     "q": -0.0106,
+     "evals": 5,
+     "proof": false
+    },
+    {
+     "uci": "a1c1",
+     "q": -0.0107,
+     "evals": 5,
+     "proof": false
+    },
+    {
+     "uci": "d1d3",
+     "q": -0.0522,
+     "evals": 4,
+     "proof": false
+    },
+    {
+     "uci": "e3g5",
+     "q": -0.2748,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": -0.0818,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "d1c1",
+     "q": -0.0779,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "d4e2",
+     "q": -0.2143,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "e3c1",
+     "q": -0.0778,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d1b1",
+     "q": -0.1749,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "e1d2",
+     "q": -0.4572,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.3061,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e4e5",
+     "q": -0.7023,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.339,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b1",
+     "q": -0.4573,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e2",
+     "q": -0.4937,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3a4",
+     "q": -0.4939,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b5",
+     "q": -0.9801,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d5",
+     "q": -0.9858,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b5",
+     "q": -0.9731,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f5",
+     "q": -0.983,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4c6",
+     "q": -0.9907,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e6",
+     "q": -0.9486,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1b5",
+     "q": -0.9658,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1a6",
+     "q": -0.9689,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3f4",
+     "q": -0.9298,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3h6",
+     "q": -0.9853,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1g4",
+     "q": -0.9961,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1h5",
+     "q": -0.9953,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1e2",
+     "q": -0.4728,
+     "evals": 1,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "d1d2",
+     "q": 0.1597,
+     "evals": 1218,
+     "proof": false
+    },
+    {
+     "uci": "f2f3",
+     "q": 0.0031,
+     "evals": 1144,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": 0.0949,
+     "evals": 535,
+     "proof": false
+    },
+    {
+     "uci": "f1e2",
+     "q": -0.052,
+     "evals": 241,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": 0.0325,
+     "evals": 217,
+     "proof": false
+    },
+    {
+     "uci": "d1e2",
+     "q": 0.0267,
+     "evals": 164,
+     "proof": false
+    },
+    {
+     "uci": "f1d3",
+     "q": -0.1333,
+     "evals": 126,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.1298,
+     "evals": 96,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.0851,
+     "evals": 81,
+     "proof": false
+    },
+    {
+     "uci": "d1f3",
+     "q": -0.1427,
+     "evals": 69,
+     "proof": false
+    },
+    {
+     "uci": "f1c4",
+     "q": -0.0346,
+     "evals": 63,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.1629,
+     "evals": 56,
+     "proof": false
+    },
+    {
+     "uci": "h1g1",
+     "q": -0.0426,
+     "evals": 46,
+     "proof": false
+    },
+    {
+     "uci": "e3d2",
+     "q": -0.0844,
+     "evals": 15,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": -0.0752,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.0348,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d4b3",
+     "q": -0.061,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "a1c1",
+     "q": -0.0444,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d1c1",
+     "q": -0.0923,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.3061,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e4e5",
+     "q": -0.7023,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.339,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b1",
+     "q": -0.4573,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e2",
+     "q": -0.4937,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3a4",
+     "q": -0.4939,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b5",
+     "q": -0.9801,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d5",
+     "q": -0.9858,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e2",
+     "q": -0.1682,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f3",
+     "q": -0.0693,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b5",
+     "q": -0.9731,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f5",
+     "q": -0.983,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4c6",
+     "q": -0.9907,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e6",
+     "q": -0.9486,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1b5",
+     "q": -0.9658,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1a6",
+     "q": -0.9689,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3c1",
+     "q": -0.0657,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3f4",
+     "q": -0.9298,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3g5",
+     "q": -0.0945,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3h6",
+     "q": -0.9853,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a1b1",
+     "q": -0.0422,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1b1",
+     "q": -0.1877,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1d3",
+     "q": -0.05,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1g4",
+     "q": -0.9961,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1h5",
+     "q": -0.9953,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1d2",
+     "q": -0.3306,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1e2",
+     "q": -0.4728,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  },
+  {
+   "name": "rook endgame, one plan",
+   "fen": "8/8/4kpp1/3p1b2/p6P/2B5/6P1/6K1 w - - 0 1",
+   "agree": true,
+   "puct_deterministic": true,
+   "puct_best": "g1f2",
+   "voi_best": "g1f2",
+   "puct": {
+    "total_evals": 4050,
+    "moves": 16,
+    "eff_branching@5%": 3,
+    "top1_share": 0.585,
+    "entropy": 1.061,
+    "rho_closeness_vs_evalshare": 0.902,
+    "rho_prior_vs_evalshare": 0.901,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 0
+   },
+   "voi": {
+    "total_evals": 888,
+    "moves": 16,
+    "eff_branching@5%": 3,
+    "top1_share": 0.575,
+    "entropy": 1.123,
+    "rho_closeness_vs_evalshare": 0.816,
+    "rho_prior_vs_evalshare": 0.822,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 0
+   },
+   "puct_rows": [
+    {
+     "uci": "g1f2",
+     "q": -0.2551,
+     "evals": 2368,
+     "proof": false
+    },
+    {
+     "uci": "c3b2",
+     "q": -0.3323,
+     "evals": 949,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.2791,
+     "evals": 645,
+     "proof": false
+    },
+    {
+     "uci": "c3d4",
+     "q": -0.6351,
+     "evals": 50,
+     "proof": false
+    },
+    {
+     "uci": "c3a1",
+     "q": -0.4951,
+     "evals": 15,
+     "proof": false
+    },
+    {
+     "uci": "g1f1",
+     "q": -0.6568,
+     "evals": 12,
+     "proof": false
+    },
+    {
+     "uci": "g1h2",
+     "q": -0.8677,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "h4h5",
+     "q": -0.9949,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.9928,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e1",
+     "q": -0.9865,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d2",
+     "q": -0.9828,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b4",
+     "q": -0.9773,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3a5",
+     "q": -0.9841,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e5",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3f6",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": -0.9651,
+     "evals": 1,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "g1f2",
+     "q": -0.3372,
+     "evals": 511,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.5304,
+     "evals": 208,
+     "proof": false
+    },
+    {
+     "uci": "c3b2",
+     "q": -0.3429,
+     "evals": 140,
+     "proof": false
+    },
+    {
+     "uci": "c3d4",
+     "q": -0.6896,
+     "evals": 14,
+     "proof": false
+    },
+    {
+     "uci": "g1f1",
+     "q": -0.6042,
+     "evals": 4,
+     "proof": false
+    },
+    {
+     "uci": "h4h5",
+     "q": -0.9949,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.9928,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3a1",
+     "q": -0.7134,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e1",
+     "q": -0.9865,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3d2",
+     "q": -0.9828,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3b4",
+     "q": -0.9773,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3a5",
+     "q": -0.9841,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3e5",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3f6",
+     "q": -0.999,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h1",
+     "q": -0.9651,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g1h2",
+     "q": -0.9027,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  },
+  {
+   "name": "opposite-side castling race",
+   "fen": "r1b1k2r/ppppnppp/2n2q2/2b5/3NP3/2P1B3/PP3PPP/RN1QKB1R w KQkq - 0 1",
+   "agree": false,
+   "puct_deterministic": true,
+   "puct_best": "f1c4",
+   "voi_best": "f1b5",
+   "puct": {
+    "total_evals": 4001,
+    "moves": 45,
+    "eff_branching@5%": 2,
+    "top1_share": 0.831,
+    "entropy": 0.83,
+    "rho_closeness_vs_evalshare": 0.94,
+    "rho_prior_vs_evalshare": 0.709,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 1,
+    "value_prior_conflict": 0
+   },
+   "voi": {
+    "total_evals": 4013,
+    "moves": 45,
+    "eff_branching@5%": 2,
+    "top1_share": 0.579,
+    "entropy": 1.175,
+    "rho_closeness_vs_evalshare": 0.573,
+    "rho_prior_vs_evalshare": 0.619,
+    "alloc_follows_value": 1,
+    "alloc_follows_prior": 0,
+    "value_prior_conflict": 1
+   },
+   "puct_rows": [
+    {
+     "uci": "f1c4",
+     "q": 0.106,
+     "evals": 3323,
+     "proof": false
+    },
+    {
+     "uci": "f1b5",
+     "q": 0.0239,
+     "evals": 247,
+     "proof": false
+    },
+    {
+     "uci": "f1e2",
+     "q": -0.0163,
+     "evals": 119,
+     "proof": false
+    },
+    {
+     "uci": "d1d2",
+     "q": -0.0271,
+     "evals": 97,
+     "proof": false
+    },
+    {
+     "uci": "d1a4",
+     "q": -0.1415,
+     "evals": 50,
+     "proof": false
+    },
+    {
+     "uci": "d4c2",
+     "q": -0.0926,
+     "evals": 40,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.1143,
+     "evals": 19,
+     "proof": false
+    },
+    {
+     "uci": "d1f3",
+     "q": -0.1349,
+     "evals": 13,
+     "proof": false
+    },
+    {
+     "uci": "d1d3",
+     "q": -0.1099,
+     "evals": 11,
+     "proof": false
+    },
+    {
+     "uci": "b1a3",
+     "q": -0.0898,
+     "evals": 8,
+     "proof": false
+    },
+    {
+     "uci": "f1d3",
+     "q": -0.2315,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "d1h5",
+     "q": -0.4453,
+     "evals": 7,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.1342,
+     "evals": 6,
+     "proof": false
+    },
+    {
+     "uci": "d1c2",
+     "q": -0.2781,
+     "evals": 4,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.2641,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.2538,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": -0.2059,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "d4f5",
+     "q": -0.327,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.4177,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "f2f3",
+     "q": -0.4147,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.3302,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.4355,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.3327,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "b1d2",
+     "q": -0.4576,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d4c6",
+     "q": -0.6331,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "h1g1",
+     "q": -0.5157,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d1c1",
+     "q": -0.3379,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d1e2",
+     "q": -0.3836,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "d1b3",
+     "q": -0.3496,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "c3c4",
+     "q": -0.9896,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e4e5",
+     "q": -0.6764,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e2",
+     "q": -0.6411,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b3",
+     "q": -0.9286,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f3",
+     "q": -0.5144,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b5",
+     "q": -0.5327,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e6",
+     "q": -0.9065,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1a6",
+     "q": -0.994,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3c1",
+     "q": -0.8168,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3d2",
+     "q": -0.9553,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3f4",
+     "q": -0.9932,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3g5",
+     "q": -0.9928,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3h6",
+     "q": -0.9915,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1g4",
+     "q": -0.6367,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1d2",
+     "q": -0.9215,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1e2",
+     "q": -0.8911,
+     "evals": 1,
+     "proof": false
+    }
+   ],
+   "voi_rows": [
+    {
+     "uci": "f1b5",
+     "q": 0.0355,
+     "evals": 2322,
+     "proof": false
+    },
+    {
+     "uci": "f1c4",
+     "q": 0.0245,
+     "evals": 1235,
+     "proof": false
+    },
+    {
+     "uci": "g2g3",
+     "q": -0.0856,
+     "evals": 110,
+     "proof": false
+    },
+    {
+     "uci": "f1e2",
+     "q": -0.2365,
+     "evals": 98,
+     "proof": false
+    },
+    {
+     "uci": "d4c2",
+     "q": -0.201,
+     "evals": 78,
+     "proof": false
+    },
+    {
+     "uci": "d1d2",
+     "q": -0.2376,
+     "evals": 71,
+     "proof": false
+    },
+    {
+     "uci": "b1a3",
+     "q": -0.2795,
+     "evals": 26,
+     "proof": false
+    },
+    {
+     "uci": "b2b4",
+     "q": -0.2804,
+     "evals": 18,
+     "proof": false
+    },
+    {
+     "uci": "d1d3",
+     "q": -0.2299,
+     "evals": 16,
+     "proof": false
+    },
+    {
+     "uci": "d1f3",
+     "q": -0.1974,
+     "evals": 3,
+     "proof": false
+    },
+    {
+     "uci": "h2h3",
+     "q": -0.3302,
+     "evals": 2,
+     "proof": false
+    },
+    {
+     "uci": "a2a3",
+     "q": -0.2101,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b2b3",
+     "q": -0.3179,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f2f3",
+     "q": -0.2511,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "c3c4",
+     "q": -0.9896,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e4e5",
+     "q": -0.6764,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "a2a4",
+     "q": -0.2055,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f2f4",
+     "q": -0.2449,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "g2g4",
+     "q": -0.3012,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h2h4",
+     "q": -0.1765,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "b1d2",
+     "q": -0.4671,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e2",
+     "q": -0.6411,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b3",
+     "q": -0.9286,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f3",
+     "q": -0.5144,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4b5",
+     "q": -0.5327,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4f5",
+     "q": -0.3315,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4c6",
+     "q": -0.4743,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d4e6",
+     "q": -0.9065,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1d3",
+     "q": -0.3023,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "f1a6",
+     "q": -0.994,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3c1",
+     "q": -0.8168,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3d2",
+     "q": -0.9553,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3f4",
+     "q": -0.9932,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3g5",
+     "q": -0.9928,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e3h6",
+     "q": -0.9915,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "h1g1",
+     "q": -0.3535,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1c1",
+     "q": -0.3217,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1c2",
+     "q": -0.2002,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1e2",
+     "q": -0.304,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1b3",
+     "q": -0.395,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1a4",
+     "q": -0.1874,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1g4",
+     "q": -0.6367,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "d1h5",
+     "q": -0.2599,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1d2",
+     "q": -0.9215,
+     "evals": 1,
+     "proof": false
+    },
+    {
+     "uci": "e1e2",
+     "q": -0.8911,
+     "evals": 1,
+     "proof": false
+    }
+   ]
+  }
+ ]
+}

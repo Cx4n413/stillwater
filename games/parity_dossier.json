@@ -1,0 +1,158 @@
+[
+ {
+  "game": 1,
+  "white": "Lc0-800",
+  "black": "SW-768",
+  "result": "1-0",
+  "sw_last_ok": {
+   "ply": 28,
+   "san": "h6",
+   "fen": "r3k2r/ppqn1ppp/2pbp3/3P1b2/2P2P2/2N1B3/PP2B1PP/R2Q1RK1 b kq - 0 14",
+   "eval": -0.43
+  },
+  "lc0_claim": {
+   "ply": 29,
+   "san": "dxe6",
+   "fen": "r3k2r/ppqn1pp1/2pbp2p/3P1b2/2P2P2/2N1B3/PP2B1PP/R2Q1RK1 w kq - 0 15",
+   "eval": 1.57
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 28,
+    "san": "h6",
+    "fen": "r3k2r/ppqn1ppp/2pbp3/3P1b2/2P2P2/2N1B3/PP2B1PP/R2Q1RK1 b kq - 0 14",
+    "eval": -0.43
+   }
+  ]
+ },
+ {
+  "game": 2,
+  "white": "SW-768",
+  "black": "Lc0-800",
+  "result": "0-1",
+  "sw_last_ok": {
+   "ply": 47,
+   "san": "Bxb4",
+   "fen": "3r1rk1/6pp/1pp1pb2/p1n1N3/1nP5/2B3P1/1P2BP1P/R2R2K1 w - - 3 24",
+   "eval": -0.43
+  },
+  "lc0_claim": {
+   "ply": 48,
+   "san": "axb4",
+   "fen": "3r1rk1/6pp/1pp1pb2/p1n1N3/1BP5/6P1/1P2BP1P/R2R2K1 b - - 0 24",
+   "eval": 1.7
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 47,
+    "san": "Bxb4",
+    "fen": "3r1rk1/6pp/1pp1pb2/p1n1N3/1nP5/2B3P1/1P2BP1P/R2R2K1 w - - 3 24",
+    "eval": -0.43
+   }
+  ]
+ },
+ {
+  "game": 4,
+  "white": "SW-768",
+  "black": "Lc0-800",
+  "result": "0-1",
+  "sw_last_ok": {
+   "ply": 47,
+   "san": "Qxc8+",
+   "fen": "2r1k3/pp3pbp/q3b2p/3pNr2/8/P4NP1/2Q2P1P/2R1R1K1 w - - 10 24",
+   "eval": -0.26
+  },
+  "lc0_claim": {
+   "ply": 48,
+   "san": "Bxc8",
+   "fen": "2Q1k3/pp3pbp/q3b2p/3pNr2/8/P4NP1/5P1P/2R1R1K1 b - - 0 24",
+   "eval": 2.91
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 47,
+    "san": "Qxc8+",
+    "fen": "2r1k3/pp3pbp/q3b2p/3pNr2/8/P4NP1/2Q2P1P/2R1R1K1 w - - 10 24",
+    "eval": -0.26
+   }
+  ]
+ },
+ {
+  "game": 5,
+  "white": "Lc0-800",
+  "black": "SW-768",
+  "result": "1-0",
+  "sw_last_ok": {
+   "ply": 50,
+   "san": "f6",
+   "fen": "6k1/p4pp1/4p2p/4N2Q/Pn1Pq3/6P1/1P3P1P/6K1 b - - 2 25",
+   "eval": -0.42
+  },
+  "lc0_claim": {
+   "ply": 51,
+   "san": "Nd7",
+   "fen": "6k1/p5p1/4pp1p/4N2Q/Pn1Pq3/6P1/1P3P1P/6K1 w - - 0 26",
+   "eval": 1.11
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 50,
+    "san": "f6",
+    "fen": "6k1/p4pp1/4p2p/4N2Q/Pn1Pq3/6P1/1P3P1P/6K1 b - - 2 25",
+    "eval": -0.42
+   }
+  ]
+ },
+ {
+  "game": 6,
+  "white": "SW-768",
+  "black": "Lc0-800",
+  "result": "0-1",
+  "sw_last_ok": {
+   "ply": 63,
+   "san": "Rxc8",
+   "fen": "2rr2k1/p2q2p1/2R4p/N3pp2/PP1n4/7P/2Q2PP1/3R2K1 w - - 0 32",
+   "eval": -0.26
+  },
+  "lc0_claim": {
+   "ply": 64,
+   "san": "Rxc8",
+   "fen": "2Rr2k1/p2q2p1/7p/N3pp2/PP1n4/7P/2Q2PP1/3R2K1 b - - 0 32",
+   "eval": 1.28
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 63,
+    "san": "Rxc8",
+    "fen": "2rr2k1/p2q2p1/2R4p/N3pp2/PP1n4/7P/2Q2PP1/3R2K1 w - - 0 32",
+    "eval": -0.26
+   }
+  ]
+ },
+ {
+  "game": 7,
+  "white": "Lc0-800",
+  "black": "SW-768",
+  "result": "1-0",
+  "sw_last_ok": {
+   "ply": 50,
+   "san": "Rxb8",
+   "fen": "1Rr1b1k1/p4r1p/4ppp1/n2p2Pn/3P4/q2BPNB1/5P1P/1Q3RK1 b - - 2 25",
+   "eval": -0.29
+  },
+  "lc0_claim": {
+   "ply": 51,
+   "san": "Qxb8",
+   "fen": "1r2b1k1/p4r1p/4ppp1/n2p2Pn/3P4/q2BPNB1/5P1P/1Q3RK1 w - - 0 26",
+   "eval": 1.06
+  },
+  "sw_suspect_moves": [
+   {
+    "ply": 50,
+    "san": "Rxb8",
+    "fen": "1Rr1b1k1/p4r1p/4ppp1/n2p2Pn/3P4/q2BPNB1/5P1P/1Q3RK1 b - - 2 25",
+    "eval": -0.29
+   }
+  ]
+ }
+]

@@ -1,0 +1,53 @@
+[01:54:27] tuner start: budget 18000s, nodes 600
+[01:54:27] fitness suite: 215 STS positions (stride 7)
+[01:55:51] baseline STS-subset = 84.42%
+[01:58:35]   r1 lcb_k 0.300->0.200: 84.42->84.79%  (accept)
+[01:59:56]   r1 fpu_red 0.200->0.280: 84.79->84.88%  (accept)
+[02:04:01]   r1 cpuct_init 1.745->2.045: 84.88->85.63%  (accept)
+[02:09:23]   r1 c_var 0.350->0.200: 85.63->86.05%  (accept)
+[02:13:25]   r1 pick_k 0.500->0.700: 86.05->86.28%  (accept)
+[02:13:25] round 1 done: best 86.28%, 19 min elapsed
+[02:18:49]   r2 fpu_red 0.280->0.200: 86.28->86.74%  (accept)
+[02:25:34]   r2 cpuct_factor 3.894->4.694: 86.74->87.07%  (accept)
+[02:32:18]   r2 pick_k 0.700->0.900: 87.07->87.26%  (accept)
+[02:32:18] round 2 done: best 87.26%, 38 min elapsed
+[02:52:32]   r3 pick_k 0.900->1.100: 87.26->87.49%  (accept)
+[02:52:32] round 3 done: best 87.49%, 58 min elapsed
+[02:55:14]   r4 lcb_k 0.200->0.100: 87.49->87.53%  (accept)
+[02:56:35]   r4 fpu_red 0.200->0.280: 87.53->87.58%  (accept)
+[03:04:41]   r4 cpuct_factor 4.694->3.894: 87.58->87.77%  (accept)
+[03:12:46] round 4 done: best 87.77%, 78 min elapsed
+[03:19:31]   r5 ml_thresh 0.800->0.900: 87.77->88.05%  (accept)
+[03:33:01] round 5 done: best 88.05%, 99 min elapsed
+[03:35:43]   r6 lcb_k 0.100->0.000: 88.05->88.28%  (accept)
+[03:38:25]   r6 fpu_red 0.280->0.200: 88.28->88.42%  (accept)
+[03:43:49]   r6 cpuct_factor 3.894->4.694: 88.42->88.47%  (accept)
+[03:51:55] round 6 done: best 88.47%, 117 min elapsed
+[04:10:49]   r7: no improvement, steps halved -> {'lcb_k': 0.05, 'fpu_red': 0.04, 'ml_thresh': 0.05, 'cpuct_init': 0.15, 'cpuct_factor': 0.4, 'c_var': 0.075, 'vloss_w': 0.1, 'pick_k': 0.1}
+[04:10:49] round 7 done: best 88.47%, 136 min elapsed
+[04:29:43]   r8: no improvement, steps halved -> {'lcb_k': 0.025, 'fpu_red': 0.02, 'ml_thresh': 0.025, 'cpuct_init': 0.075, 'cpuct_factor': 0.2, 'c_var': 0.037, 'vloss_w': 0.05, 'pick_k': 0.05}
+[04:29:43] round 8 done: best 88.47%, 155 min elapsed
+[04:32:25]   r9 fpu_red 0.200->0.220: 88.47->88.88%  (accept)
+[04:39:11]   r9 cpuct_factor 4.694->4.894: 88.88->88.93%  (accept)
+[04:47:18] round 9 done: best 88.93%, 173 min elapsed
+[05:07:35]   r10: no improvement, steps halved -> {'lcb_k': 0.013, 'fpu_red': 0.01, 'ml_thresh': 0.013, 'cpuct_init': 0.037, 'cpuct_factor': 0.1, 'c_var': 0.019, 'vloss_w': 0.025, 'pick_k': 0.025}
+[05:07:35]   steps below 20% of initial: converged
+[05:07:35] === VALIDATION (full STS-1500 + WAC-300) ===
+[05:29:58] STILLWATER constant tuning report
+rounds: 10, tuning fitness STS-subset best: 88.93%
+
+param            baseline      tuned
+lcb_k              0.3000     0.0000
+fpu_red            0.2000     0.2200
+ml_thresh          0.8000     0.9000
+cpuct_init         1.7450     2.0450
+cpuct_factor       3.8940     4.8940
+c_var              0.3500     0.2000
+vloss_w            0.8500     0.8500
+pick_k             0.5000     1.1000
+
+full STS-1500:  baseline 85.87%  tuned 86.96%  (delta +1.09)
+WAC-300:        baseline 92.00%  tuned 91.33%  (delta -0.67)
+
+DECISION: SHIP tuned
+[05:29:58] TUNE DONE ship=True

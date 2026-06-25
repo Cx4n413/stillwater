@@ -1,0 +1,9 @@
+[20:33:43] tuner start: budget 22500s, nodes 600
+[20:33:43] fitness suite: 215 STS positions (stride 7)
+[20:35:09] baseline STS-subset = 84.42%
+[20:37:56]   r1 lcb_k 0.300->0.200: 84.42->84.79%  (accept)
+[20:39:20]   r1 fpu_red 0.200->0.280: 84.79->84.88%  (accept)
+[20:43:29]   r1 cpuct_init 1.745->2.045: 84.88->85.63%  (accept)
+[20:48:59]   r1 c_var 0.350->0.200: 85.63->86.05%  (accept)
+[20:53:08]   r1 pick_k 0.500->0.700: 86.05->86.28%  (accept)
+[20:53:08] round 1 done: best 86.28%, 19 min elapsed

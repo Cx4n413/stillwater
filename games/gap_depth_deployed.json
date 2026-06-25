@@ -1,0 +1,2422 @@
+{
+ "sw_rungs": [
+  768,
+  4000,
+  16000,
+  40000
+ ],
+ "lc0_rungs": [
+  20000,
+  100000
+ ],
+ "sf_depth": 20,
+ "skipped_tie": 99,
+ "records": [
+  {
+   "fen": "3r4/4qpk1/pn4pp/3R4/1Pp3P1/P7/2Q2PP1/1B1R2K1 b - - 0 35",
+   "phase": "middlegame",
+   "M": "d8d5",
+   "cp_M": 0,
+   "S_raw_top": "d8d5",
+   "S_raw_low": "d8d5",
+   "deployed_top": "d8d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.020767778074048164,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 807,
+     "raw_pick": "d8d5",
+     "deployed_pick": "d8d5",
+     "q_M": -0.018104353738071892
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 1924,
+     "raw_pick": "d8d5",
+     "deployed_pick": "d8d5",
+     "q_M": 0.0026634243359762713
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 1924,
+     "raw_pick": "d8d5",
+     "deployed_pick": "d8d5",
+     "q_M": 0.0026634243359762713
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 1924,
+     "raw_pick": "d8d5",
+     "deployed_pick": "d8d5",
+     "q_M": 0.0026634243359762713
+    }
+   ]
+  },
+  {
+   "fen": "3bnk1r/1r3p2/2qp4/4p2p/RB6/1P3P1B/2P1Q3/6RK b - - 0 32",
+   "phase": "middlegame",
+   "M": "h8g8",
+   "cp_M": -36,
+   "S_raw_top": "h8g8",
+   "S_raw_low": "b7b8",
+   "deployed_top": "h8g8",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_findable",
+   "q_M_trend": 0.034519148429854485,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 769,
+     "raw_pick": "b7b8",
+     "deployed_pick": "d8b6",
+     "q_M": -0.3058124530908022
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4022,
+     "raw_pick": "c6d5",
+     "deployed_pick": "h8g8",
+     "q_M": -0.4477908412838252
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16003,
+     "raw_pick": "h8g8",
+     "deployed_pick": "h8g8",
+     "q_M": -0.10716825484968548
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 33075,
+     "raw_pick": "h8g8",
+     "deployed_pick": "h8g8",
+     "q_M": -0.2712933046609477
+    }
+   ]
+  },
+  {
+   "fen": "6rk/7p/4nP2/Ppp1P3/3p4/4q1P1/Q7/4BR1K b - - 8 55",
+   "phase": "middlegame",
+   "M": "e3e5",
+   "cp_M": -77,
+   "S_raw_top": "e3e5",
+   "S_raw_low": "e3d3",
+   "deployed_top": "e3e5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_findable",
+   "q_M_trend": 0.4241533455788125,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 789,
+     "raw_pick": "e3d3",
+     "deployed_pick": "e3d3",
+     "q_M": -0.559935706666165
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4050,
+     "raw_pick": "e3e5",
+     "deployed_pick": "e3e5",
+     "q_M": -0.2142459394480606
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16004,
+     "raw_pick": "e3e5",
+     "deployed_pick": "e3e5",
+     "q_M": -0.2755014252688671
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40001,
+     "raw_pick": "e3e5",
+     "deployed_pick": "e3e5",
+     "q_M": -0.13578236108735248
+    }
+   ]
+  },
+  {
+   "fen": "3r2k1/p7/1p2q3/1P1p2pp/5r2/6P1/P2Q1PKP/3R1R2 b - - 2 31",
+   "phase": "middlegame",
+   "M": "d5d4",
+   "cp_M": -2,
+   "S_raw_top": "d5d4",
+   "S_raw_low": "d5d4",
+   "deployed_top": "d5d4",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.14277930580072046,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 780,
+     "raw_pick": "d5d4",
+     "deployed_pick": "f4f5",
+     "q_M": -0.18982494735196076
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4009,
+     "raw_pick": "d5d4",
+     "deployed_pick": "d5d4",
+     "q_M": -0.0926733001980572
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 14292,
+     "raw_pick": "d5d4",
+     "deployed_pick": "d5d4",
+     "q_M": -0.04704564155124031
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 14292,
+     "raw_pick": "d5d4",
+     "deployed_pick": "d5d4",
+     "q_M": -0.04704564155124031
+    }
+   ]
+  },
+  {
+   "fen": "8/1r2nkpp/1p3p2/rP1p4/p1bP2P1/P1N1RP2/1B3K1P/4R3 b - - 5 27",
+   "phase": "middlegame",
+   "M": "c4b5",
+   "cp_M": 98,
+   "S_raw_top": "c4b5",
+   "S_raw_low": "c4b5",
+   "deployed_top": "c4b5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.028544510185203376,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 829,
+     "raw_pick": "c4b5",
+     "deployed_pick": "c4b5",
+     "q_M": 0.3681247031963216
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4103,
+     "raw_pick": "c4b5",
+     "deployed_pick": "c4b5",
+     "q_M": 0.374454142285087
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16080,
+     "raw_pick": "c4b5",
+     "deployed_pick": "c4b5",
+     "q_M": 0.5197499075777452
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 39943,
+     "raw_pick": "c4b5",
+     "deployed_pick": "c4b5",
+     "q_M": 0.33958019301111825
+    }
+   ]
+  },
+  {
+   "fen": "3r2k1/pb3p2/1pn1p1p1/7p/2P1P3/PP3P2/4BqPP/R1Q2N1K w - - 2 26",
+   "phase": "middlegame",
+   "M": "c1e1",
+   "cp_M": 36,
+   "S_raw_top": "c1e1",
+   "S_raw_low": "c1e1",
+   "deployed_top": "c1e1",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.05841595288704787,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 810,
+     "raw_pick": "c1e1",
+     "deployed_pick": "c1e1",
+     "q_M": 0.08859207315580907
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4127,
+     "raw_pick": "c1e1",
+     "deployed_pick": "c1e1",
+     "q_M": 0.11147224512673107
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16094,
+     "raw_pick": "c1e1",
+     "deployed_pick": "c1e1",
+     "q_M": 0.031822571323236744
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40037,
+     "raw_pick": "c1e1",
+     "deployed_pick": "c1e1",
+     "q_M": 0.030176120268761198
+    }
+   ]
+  },
+  {
+   "fen": "8/8/4p1k1/R6p/5Ppn/8/5PK1/4rN2 w - - 0 53",
+   "phase": "endgame",
+   "M": "g2g3",
+   "cp_M": -423,
+   "S_raw_top": "g2g1",
+   "S_raw_low": "g2g3",
+   "deployed_top": "g2g3",
+   "raw_vs_deployed_differ": true,
+   "loss": 418,
+   "decisive": true,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.013376725908863185,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 820,
+     "raw_pick": "g2g3",
+     "deployed_pick": "g2g3",
+     "q_M": -0.9539384500334788
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4003,
+     "raw_pick": "g2g3",
+     "deployed_pick": "g2g3",
+     "q_M": -0.9681561875288288
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 6225,
+     "raw_pick": "g2g1",
+     "deployed_pick": "g2g3",
+     "q_M": -0.967315175942342
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 6225,
+     "raw_pick": "g2g1",
+     "deployed_pick": "g2g3",
+     "q_M": -0.967315175942342
+    }
+   ]
+  },
+  {
+   "fen": "rnbqr1k1/ppp2ppp/3p1n2/b7/8/2N1PNB1/P1PP1PPP/R2QKB1R w KQ - 1 8",
+   "phase": "opening",
+   "M": "g3h4",
+   "cp_M": -41,
+   "S_raw_top": "f1b5",
+   "S_raw_low": "g3h4",
+   "deployed_top": "f1b5",
+   "raw_vs_deployed_differ": false,
+   "loss": 28,
+   "decisive": true,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.3982982930812649,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 855,
+     "raw_pick": "g3h4",
+     "deployed_pick": "g3h4",
+     "q_M": -0.16656523607131118
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4029,
+     "raw_pick": "f1d3",
+     "deployed_pick": "f1d3",
+     "q_M": -0.5648635291525761
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16119,
+     "raw_pick": "f1d3",
+     "deployed_pick": "f1d3",
+     "q_M": -0.5648635291525761
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40043,
+     "raw_pick": "f1b5",
+     "deployed_pick": "f1b5",
+     "q_M": -0.5648635291525761
+    }
+   ]
+  },
+  {
+   "fen": "8/1b1r1k2/4pP2/4B1K1/4p3/4P3/R7/8 b - - 0 45",
+   "phase": "endgame",
+   "M": "d7d5",
+   "cp_M": -160,
+   "S_raw_top": "d7d5",
+   "S_raw_low": "d7d5",
+   "deployed_top": "d7d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.024677639846023003,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 859,
+     "raw_pick": "d7d5",
+     "deployed_pick": "d7d5",
+     "q_M": -0.681260327398398
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4012,
+     "raw_pick": "d7d5",
+     "deployed_pick": "d7d5",
+     "q_M": -0.7119166583355091
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 4799,
+     "raw_pick": "d7d5",
+     "deployed_pick": "d7d5",
+     "q_M": -0.705937967244421
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 4799,
+     "raw_pick": "d7d5",
+     "deployed_pick": "d7d5",
+     "q_M": -0.705937967244421
+    }
+   ]
+  },
+  {
+   "fen": "2rb4/5p1k/pn2pPpp/3pP3/1PqP4/5NP1/3R2KP/Q2N4 w - - 0 34",
+   "phase": "middlegame",
+   "M": "h2h4",
+   "cp_M": 41,
+   "S_raw_top": "d1f2",
+   "S_raw_low": "d1f2",
+   "deployed_top": "d1f2",
+   "raw_vs_deployed_differ": false,
+   "loss": 16,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "minor_miss",
+   "q_M_trend": 0.0,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 788,
+     "raw_pick": "d1f2",
+     "deployed_pick": "d1f2",
+     "q_M": 0.1807072520216088
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 1295,
+     "raw_pick": "d1f2",
+     "deployed_pick": "d1f2",
+     "q_M": 0.1807072520216088
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 1295,
+     "raw_pick": "d1f2",
+     "deployed_pick": "d1f2",
+     "q_M": 0.1807072520216088
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 1295,
+     "raw_pick": "d1f2",
+     "deployed_pick": "d1f2",
+     "q_M": 0.1807072520216088
+    }
+   ]
+  },
+  {
+   "fen": "4r3/1p3pk1/p1bQ4/q2N4/1P6/5N2/Pb3PP1/3R2K1 b - - 0 30",
+   "phase": "middlegame",
+   "M": "a5a4",
+   "cp_M": -280,
+   "S_raw_top": "a5a4",
+   "S_raw_low": "a5a4",
+   "deployed_top": "a5a4",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.18628562009080685,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 864,
+     "raw_pick": "a5a4",
+     "deployed_pick": "a5a4",
+     "q_M": -0.8269640910102547
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 991,
+     "raw_pick": "a5a4",
+     "deployed_pick": "a5a4",
+     "q_M": -0.6406784709194479
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 991,
+     "raw_pick": "a5a4",
+     "deployed_pick": "a5a4",
+     "q_M": -0.6406784709194479
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 991,
+     "raw_pick": "a5a4",
+     "deployed_pick": "a5a4",
+     "q_M": -0.6406784709194479
+    }
+   ]
+  },
+  {
+   "fen": "q3r1k1/5pbp/3p2p1/3P4/P1p2B2/2N3P1/1PQ4P/3r1R1K w - - 0 26",
+   "phase": "middlegame",
+   "M": "c2d1",
+   "cp_M": 376,
+   "S_raw_top": "c2d1",
+   "S_raw_low": "c2d1",
+   "deployed_top": "c2d1",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.005981132294366809,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 861,
+     "raw_pick": "c2d1",
+     "deployed_pick": "f1d1",
+     "q_M": 0.9756682162646059
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4061,
+     "raw_pick": "c2d1",
+     "deployed_pick": "f1d1",
+     "q_M": 0.9761888605457942
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16125,
+     "raw_pick": "f1d1",
+     "deployed_pick": "f1d1",
+     "q_M": 0.973442930660162
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40035,
+     "raw_pick": "c2d1",
+     "deployed_pick": "c2d1",
+     "q_M": 0.9696870839702391
+    }
+   ]
+  },
+  {
+   "fen": "r2qkb1r/1b1n1ppp/p3pn2/1pp5/3PP3/2NB1N2/PP3PPP/R1BQ1RK1 w kq - 0 11",
+   "phase": "opening",
+   "M": "d4d5",
+   "cp_M": 35,
+   "S_raw_top": "d4d5",
+   "S_raw_low": "d4d5",
+   "deployed_top": "d4d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.08724916791516309,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 797,
+     "raw_pick": "d4d5",
+     "deployed_pick": "d4d5",
+     "q_M": 0.08828252783763409
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4019,
+     "raw_pick": "d4d5",
+     "deployed_pick": "d4d5",
+     "q_M": 0.19423775783336483
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16002,
+     "raw_pick": "e4e5",
+     "deployed_pick": "e4e5",
+     "q_M": 0.00027504076601886563
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40038,
+     "raw_pick": "d4d5",
+     "deployed_pick": "d4d5",
+     "q_M": 0.17553169575279717
+    }
+   ]
+  },
+  {
+   "fen": "6k1/5p1p/6p1/1B1Rpb2/1P6/4P2P/6K1/8 b - - 0 32",
+   "phase": "endgame",
+   "M": "f5e4",
+   "cp_M": 191,
+   "S_raw_top": "f5e4",
+   "S_raw_low": "f5e4",
+   "deployed_top": "f5e4",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.09764118174821701,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 878,
+     "raw_pick": "f5e4",
+     "deployed_pick": "f5e4",
+     "q_M": 0.732245307256428
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4051,
+     "raw_pick": "f5e4",
+     "deployed_pick": "f5e4",
+     "q_M": 0.7889356065602299
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 11426,
+     "raw_pick": "f5e4",
+     "deployed_pick": "f5e4",
+     "q_M": 0.829886489004645
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 11426,
+     "raw_pick": "f5e4",
+     "deployed_pick": "f5e4",
+     "q_M": 0.829886489004645
+    }
+   ]
+  },
+  {
+   "fen": "r2qr1k1/5pp1/P4n1p/3P4/2pQ4/P1N4P/1P2BnP1/R5K1 w - - 0 24",
+   "phase": "middlegame",
+   "M": "d4f2",
+   "cp_M": 4,
+   "S_raw_top": "d4f2",
+   "S_raw_low": "d4f2",
+   "deployed_top": "d4f2",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.04026765371887278,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 854,
+     "raw_pick": "d4f2",
+     "deployed_pick": "d4f2",
+     "q_M": 0.05482484692950698
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4118,
+     "raw_pick": "d4f2",
+     "deployed_pick": "d4f2",
+     "q_M": -0.05177133903203469
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16001,
+     "raw_pick": "d4f2",
+     "deployed_pick": "d4f2",
+     "q_M": 0.04277353231927458
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40121,
+     "raw_pick": "d4f2",
+     "deployed_pick": "d4f2",
+     "q_M": 0.09509250064837976
+    }
+   ]
+  },
+  {
+   "fen": "r3r1k1/3nqppp/p2p4/P2Pp3/b1B5/4BP2/P2Q2PP/K1R1R3 w - - 5 22",
+   "phase": "middlegame",
+   "M": "d2b4",
+   "cp_M": 97,
+   "S_raw_top": "c1b1",
+   "S_raw_low": "c1b1",
+   "deployed_top": "c1b1",
+   "raw_vs_deployed_differ": false,
+   "loss": 63,
+   "decisive": true,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": 1.0187191052343982,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 861,
+     "raw_pick": "c1b1",
+     "deployed_pick": "c1b1",
+     "q_M": -0.9863308176949714
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4105,
+     "raw_pick": "a2a3",
+     "deployed_pick": "c1b1",
+     "q_M": 0.13200137586905186
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16051,
+     "raw_pick": "d2b4",
+     "deployed_pick": "d2b4",
+     "q_M": 0.2108826042568117
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 27802,
+     "raw_pick": "c1b1",
+     "deployed_pick": "c1b1",
+     "q_M": 0.03238828753942688
+    }
+   ]
+  },
+  {
+   "fen": "r5k1/p1pb1pp1/q6p/2b5/6n1/PQ2BNP1/1P3P1P/R3R1K1 b - - 9 20",
+   "phase": "middlegame",
+   "M": "g4e3",
+   "cp_M": -55,
+   "S_raw_top": "g4e3",
+   "S_raw_low": "g4e3",
+   "deployed_top": "g4e3",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.04533525415089909,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 848,
+     "raw_pick": "g4e3",
+     "deployed_pick": "g4e3",
+     "q_M": -0.09438963193947644
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4103,
+     "raw_pick": "g4e3",
+     "deployed_pick": "g4e3",
+     "q_M": -0.12490452700770813
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16059,
+     "raw_pick": "g4e3",
+     "deployed_pick": "g4e3",
+     "q_M": -0.14021990659729983
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40042,
+     "raw_pick": "g4e3",
+     "deployed_pick": "g4e3",
+     "q_M": -0.13972488609037553
+    }
+   ]
+  },
+  {
+   "fen": "4r3/8/2N1P3/Pp2R1bk/1Ppp1r2/5p2/2P5/3K1R2 b - - 5 47",
+   "phase": "middlegame",
+   "M": "d4d3",
+   "cp_M": -174,
+   "S_raw_top": "h5g4",
+   "S_raw_low": "h5g4",
+   "deployed_top": "h5g4",
+   "raw_vs_deployed_differ": false,
+   "loss": 222,
+   "decisive": true,
+   "lc0_picks": [
+    "d4d3",
+    "d4d3"
+   ],
+   "lc0_found": true,
+   "sf10_eq_M": null,
+   "bucket": "search_structure",
+   "q_M_trend": 0.0,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 312,
+     "raw_pick": "h5g4",
+     "deployed_pick": "h5g4",
+     "q_M": -0.45421335875377034
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 312,
+     "raw_pick": "h5g4",
+     "deployed_pick": "h5g4",
+     "q_M": -0.45421335875377034
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 312,
+     "raw_pick": "h5g4",
+     "deployed_pick": "h5g4",
+     "q_M": -0.45421335875377034
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 312,
+     "raw_pick": "h5g4",
+     "deployed_pick": "h5g4",
+     "q_M": -0.45421335875377034
+    }
+   ]
+  },
+  {
+   "fen": "r2q1rk1/p2nppbp/2p1N1p1/1p1nP3/2B2P2/7P/PPP1Q1P1/RNB2RK1 b - - 0 12",
+   "phase": "opening",
+   "M": "f7e6",
+   "cp_M": -58,
+   "S_raw_top": "f7e6",
+   "S_raw_low": "f7e6",
+   "deployed_top": "f7e6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.08100673848567899,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 796,
+     "raw_pick": "f7e6",
+     "deployed_pick": "f7e6",
+     "q_M": -0.2029707680833495
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4118,
+     "raw_pick": "f7e6",
+     "deployed_pick": "f7e6",
+     "q_M": -0.2262301230736738
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16013,
+     "raw_pick": "f7e6",
+     "deployed_pick": "f7e6",
+     "q_M": -0.18783292831419812
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40000,
+     "raw_pick": "f7e6",
+     "deployed_pick": "f7e6",
+     "q_M": -0.1219640295976705
+    }
+   ]
+  },
+  {
+   "fen": "1r3rk1/p1qp1ppp/4p3/2p5/2Pn4/3Q1BP1/PP2PP1P/3R1RK1 w - - 1 17",
+   "phase": "middlegame",
+   "M": "b2b3",
+   "cp_M": 30,
+   "S_raw_top": "d1d2",
+   "S_raw_low": "b2b3",
+   "deployed_top": "d1d2",
+   "raw_vs_deployed_differ": false,
+   "loss": 16,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.08459282132581897,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 893,
+     "raw_pick": "b2b3",
+     "deployed_pick": "b2b3",
+     "q_M": 0.1259281386755234
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4122,
+     "raw_pick": "b2b3",
+     "deployed_pick": "b2b3",
+     "q_M": 0.06884886120000996
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16054,
+     "raw_pick": "d1d2",
+     "deployed_pick": "d1d2",
+     "q_M": 0.04479480953158292
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40056,
+     "raw_pick": "d1d2",
+     "deployed_pick": "d1d2",
+     "q_M": 0.04133531734970445
+    }
+   ]
+  },
+  {
+   "fen": "r2qr1k1/p4ppp/2P5/3pb2b/P3p3/BNNnP2P/2Q2PP1/1R3K1R w - - 1 21",
+   "phase": "opening",
+   "M": "c3b5",
+   "cp_M": -190,
+   "S_raw_top": "c3b5",
+   "S_raw_low": "c3b5",
+   "deployed_top": "c3b5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.04446686183730719,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 780,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": -0.8577777656456698
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4053,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": -0.8550021029890829
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16072,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": -0.7642558221642277
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40111,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": -0.8133109038083626
+    }
+   ]
+  },
+  {
+   "fen": "r1b2rk1/1p3pp1/2p2nnp/pPq1p3/P1B1P3/2P2N1P/2QN1PP1/R4RK1 w - - 0 19",
+   "phase": "opening",
+   "M": "b5c6",
+   "cp_M": 0,
+   "S_raw_top": "b5c6",
+   "S_raw_low": "f1b1",
+   "deployed_top": "b5c6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_findable",
+   "q_M_trend": 0.06563524663071318,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 883,
+     "raw_pick": "f1b1",
+     "deployed_pick": "b5c6",
+     "q_M": -0.08588643527045597
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4038,
+     "raw_pick": "b5c6",
+     "deployed_pick": "b5c6",
+     "q_M": -0.048979277906448064
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16065,
+     "raw_pick": "b5c6",
+     "deployed_pick": "b5c6",
+     "q_M": 0.005618365664996481
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40020,
+     "raw_pick": "b5c6",
+     "deployed_pick": "b5c6",
+     "q_M": -0.020251188639742793
+    }
+   ]
+  },
+  {
+   "fen": "4k3/p4pr1/4p1p1/2p1P2p/P2p1Q2/2qb1N2/7P/4R1K1 w - - 2 34",
+   "phase": "middlegame",
+   "M": "h2h4",
+   "cp_M": -372,
+   "S_raw_top": "f4g5",
+   "S_raw_low": "f4h6",
+   "deployed_top": "f4h6",
+   "raw_vs_deployed_differ": true,
+   "loss": 127,
+   "decisive": true,
+   "lc0_picks": [
+    "f4h6",
+    "f4h6"
+   ],
+   "lc0_found": false,
+   "sf10_eq_M": true,
+   "bucket": "eval_quality",
+   "q_M_trend": -0.0023914775956327405,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 851,
+     "raw_pick": "f4h6",
+     "deployed_pick": "e1c1",
+     "q_M": -0.978122363446526
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4100,
+     "raw_pick": "e1d1",
+     "deployed_pick": "f4h6",
+     "q_M": -0.9808892444019259
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16028,
+     "raw_pick": "f4g5",
+     "deployed_pick": "f4h6",
+     "q_M": -0.9747000168413114
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40066,
+     "raw_pick": "f4g5",
+     "deployed_pick": "f4h6",
+     "q_M": -0.9805138410421588
+    }
+   ]
+  },
+  {
+   "fen": "4k3/n7/3Qp1p1/1p1P4/4P3/6P1/4bP1P/3q1BK1 w - - 20 39",
+   "phase": "middlegame",
+   "M": "d6b8",
+   "cp_M": 0,
+   "S_raw_top": "d6b8",
+   "S_raw_low": "d6b8",
+   "deployed_top": "d6b8",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.0,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 695,
+     "raw_pick": "d6b8",
+     "deployed_pick": "d6b8",
+     "q_M": -0.10241926075335271
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 695,
+     "raw_pick": "d6b8",
+     "deployed_pick": "d6b8",
+     "q_M": -0.10241926075335271
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 695,
+     "raw_pick": "d6b8",
+     "deployed_pick": "d6b8",
+     "q_M": -0.10241926075335271
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 695,
+     "raw_pick": "d6b8",
+     "deployed_pick": "d6b8",
+     "q_M": -0.10241926075335271
+    }
+   ]
+  },
+  {
+   "fen": "2k1r2r/ppp4p/2n1bp1b/7q/QP1P1p2/2PN1Np1/P4PPP/R2R1BK1 b - - 1 21",
+   "phase": "opening",
+   "M": "e6d5",
+   "cp_M": 191,
+   "S_raw_top": "e6d5",
+   "S_raw_low": "e6d5",
+   "deployed_top": "e6d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.09297947500582615,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 805,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": 0.669631947035893
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4039,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": 0.7182735174087992
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16006,
+     "raw_pick": "e6g4",
+     "deployed_pick": "e6d5",
+     "q_M": 0.6618536358279958
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40074,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": 0.5766524720300669
+    }
+   ]
+  },
+  {
+   "fen": "r1bqkbnr/pp2pppp/2np4/8/3pP3/2N5/PPP1NPPP/R1BQKB1R w KQkq - 0 5",
+   "phase": "opening",
+   "M": "e2d4",
+   "cp_M": 39,
+   "S_raw_top": "e2d4",
+   "S_raw_low": "e2d4",
+   "deployed_top": "e2d4",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.07895502287828077,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 846,
+     "raw_pick": "e2d4",
+     "deployed_pick": "e2d4",
+     "q_M": 0.16447437258641734
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4080,
+     "raw_pick": "e2d4",
+     "deployed_pick": "e2d4",
+     "q_M": 0.13733325984591613
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16089,
+     "raw_pick": "e2d4",
+     "deployed_pick": "e2d4",
+     "q_M": 0.09607191502885762
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40074,
+     "raw_pick": "e2d4",
+     "deployed_pick": "e2d4",
+     "q_M": 0.08551934970813657
+    }
+   ]
+  },
+  {
+   "fen": "5rk1/4Bpp1/p3p2p/3p4/QP1P2n1/P2BP2P/6Pq/2R2K2 b - - 2 27",
+   "phase": "middlegame",
+   "M": "h2h1",
+   "cp_M": -92,
+   "S_raw_top": "h2h1",
+   "S_raw_low": "h2h1",
+   "deployed_top": "h2h1",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.20093321999544464,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 792,
+     "raw_pick": "h2h1",
+     "deployed_pick": "h2h1",
+     "q_M": -0.20093321999544464
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 2163,
+     "raw_pick": "h2h1",
+     "deployed_pick": "h2h1",
+     "q_M": 0.0
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 2163,
+     "raw_pick": "h2h1",
+     "deployed_pick": "h2h1",
+     "q_M": 0.0
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 2163,
+     "raw_pick": "h2h1",
+     "deployed_pick": "h2h1",
+     "q_M": 0.0
+    }
+   ]
+  },
+  {
+   "fen": "2k5/5pp1/2BPp2P/2K5/8/5PP1/3n4/8 b - - 0 38",
+   "phase": "endgame",
+   "M": "g7h6",
+   "cp_M": -6,
+   "S_raw_top": "g7h6",
+   "S_raw_low": "g7h6",
+   "deployed_top": "g7h6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.032583316751401165,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 862,
+     "raw_pick": "g7h6",
+     "deployed_pick": "g7h6",
+     "q_M": -0.013239842619427107
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 2479,
+     "raw_pick": "g7h6",
+     "deployed_pick": "g7h6",
+     "q_M": -0.04582315937082827
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 2479,
+     "raw_pick": "g7h6",
+     "deployed_pick": "g7h6",
+     "q_M": -0.04582315937082827
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 2479,
+     "raw_pick": "g7h6",
+     "deployed_pick": "g7h6",
+     "q_M": -0.04582315937082827
+    }
+   ]
+  },
+  {
+   "fen": "4r1k1/2R3pp/1P1R1p2/1r1p4/3P1P2/4PK2/7P/8 b - - 2 41",
+   "phase": "middlegame",
+   "M": "h7h5",
+   "cp_M": -446,
+   "S_raw_top": "f6f5",
+   "S_raw_low": "f6f5",
+   "deployed_top": "h7h5",
+   "raw_vs_deployed_differ": true,
+   "loss": 106,
+   "decisive": true,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": 0.0113404534594308,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 773,
+     "raw_pick": "f6f5",
+     "deployed_pick": "b5b3",
+     "q_M": -0.9786430517410939
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4014,
+     "raw_pick": "h7h5",
+     "deployed_pick": "h7h5",
+     "q_M": -0.9571793772080432
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 8981,
+     "raw_pick": "f6f5",
+     "deployed_pick": "h7h5",
+     "q_M": -0.9673025982816631
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 8981,
+     "raw_pick": "f6f5",
+     "deployed_pick": "h7h5",
+     "q_M": -0.9673025982816631
+    }
+   ]
+  },
+  {
+   "fen": "4r1k1/2pqr2p/1p2Rp2/p1p2Pp1/P2pQ3/1P5P/2P2PP1/3R2K1 w - - 4 28",
+   "phase": "middlegame",
+   "M": "d1e1",
+   "cp_M": -16,
+   "S_raw_top": "d1e1",
+   "S_raw_low": "d1e1",
+   "deployed_top": "d1e1",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.2591096342743105,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 772,
+     "raw_pick": "d1e1",
+     "deployed_pick": "d1e1",
+     "q_M": 0.2591096342743105
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 3954,
+     "raw_pick": "d1e1",
+     "deployed_pick": "d1e1",
+     "q_M": -0.0
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 3954,
+     "raw_pick": "d1e1",
+     "deployed_pick": "d1e1",
+     "q_M": -0.0
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 3954,
+     "raw_pick": "d1e1",
+     "deployed_pick": "d1e1",
+     "q_M": -0.0
+    }
+   ]
+  },
+  {
+   "fen": "rnbqk2r/pp2ppbp/5np1/1B1P4/3P4/5N2/PP3PPP/RNBQK2R b KQkq - 2 7",
+   "phase": "opening",
+   "M": "b8d7",
+   "cp_M": -12,
+   "S_raw_top": "c8d7",
+   "S_raw_low": "b8d7",
+   "deployed_top": "c8d7",
+   "raw_vs_deployed_differ": false,
+   "loss": 18,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.15531105532102468,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 865,
+     "raw_pick": "b8d7",
+     "deployed_pick": "b8d7",
+     "q_M": -0.0758842668662034
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4037,
+     "raw_pick": "b8d7",
+     "deployed_pick": "b8d7",
+     "q_M": -0.005465328812034649
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16016,
+     "raw_pick": "b8d7",
+     "deployed_pick": "b8d7",
+     "q_M": -0.007580395656494865
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40020,
+     "raw_pick": "c8d7",
+     "deployed_pick": "c8d7",
+     "q_M": -0.2311953221872281
+    }
+   ]
+  },
+  {
+   "fen": "5r2/1p4bk/p3q2p/2p5/2PnPB1p/8/P4PPN/3QR1K1 w - - 3 29",
+   "phase": "middlegame",
+   "M": "f4e3",
+   "cp_M": -46,
+   "S_raw_top": "f4e3",
+   "S_raw_low": "f4e3",
+   "deployed_top": "f4e3",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.09139307270415267,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 777,
+     "raw_pick": "f4e3",
+     "deployed_pick": "f4e3",
+     "q_M": -0.25018482774496076
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4002,
+     "raw_pick": "f4e3",
+     "deployed_pick": "f4e3",
+     "q_M": -0.3701155849941215
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16082,
+     "raw_pick": "f4e3",
+     "deployed_pick": "f4e3",
+     "q_M": -0.11507390163172787
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40071,
+     "raw_pick": "f4e3",
+     "deployed_pick": "f4e3",
+     "q_M": -0.15879175504080809
+    }
+   ]
+  },
+  {
+   "fen": "r1bqkb1r/pp1p2pp/2n1pp2/4P3/5Bn1/2N2N2/PP2BPPP/R2QK2R w KQkq - 0 9",
+   "phase": "opening",
+   "M": "e5f6",
+   "cp_M": -28,
+   "S_raw_top": "e5f6",
+   "S_raw_low": "e5f6",
+   "deployed_top": "e5f6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.10183878683793007,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 816,
+     "raw_pick": "e5f6",
+     "deployed_pick": "e5f6",
+     "q_M": 0.02027473168934559
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4093,
+     "raw_pick": "e5f6",
+     "deployed_pick": "e5f6",
+     "q_M": -0.044974107890762054
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16050,
+     "raw_pick": "e5f6",
+     "deployed_pick": "e5f6",
+     "q_M": -0.007186304325238478
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40039,
+     "raw_pick": "e5f6",
+     "deployed_pick": "e5f6",
+     "q_M": -0.08156405514858449
+    }
+   ]
+  },
+  {
+   "fen": "r1bq1rk1/ppp2p1p/n2p1npb/3Pp3/2P1P2P/2N5/PP1NBPP1/R1BQK2R b KQ - 0 9",
+   "phase": "opening",
+   "M": "d8e7",
+   "cp_M": -68,
+   "S_raw_top": "a6c5",
+   "S_raw_low": "c8d7",
+   "deployed_top": "a6c5",
+   "raw_vs_deployed_differ": false,
+   "loss": 35,
+   "decisive": true,
+   "lc0_picks": [
+    "a6c5",
+    "d8e7"
+   ],
+   "lc0_found": true,
+   "sf10_eq_M": null,
+   "bucket": "search_structure",
+   "q_M_trend": -0.13105987875538377,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 789,
+     "raw_pick": "c8d7",
+     "deployed_pick": "c8d7",
+     "q_M": -0.24748740752003812
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4051,
+     "raw_pick": "g8h8",
+     "deployed_pick": "g8h8",
+     "q_M": -0.3454760976760983
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16088,
+     "raw_pick": "a6c5",
+     "deployed_pick": "a6c5",
+     "q_M": -0.3785472862754219
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40076,
+     "raw_pick": "a6c5",
+     "deployed_pick": "a6c5",
+     "q_M": -0.3785472862754219
+    }
+   ]
+  },
+  {
+   "fen": "3brk2/1p3p1p/2p1r3/p3P3/P2B4/5R1P/1PP2P2/4RK2 b - - 0 29",
+   "phase": "middlegame",
+   "M": "d8e7",
+   "cp_M": -229,
+   "S_raw_top": "d8c7",
+   "S_raw_low": "b7b5",
+   "deployed_top": "d8c7",
+   "raw_vs_deployed_differ": false,
+   "loss": 19,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "minor_miss",
+   "q_M_trend": -0.039727097003982026,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 802,
+     "raw_pick": "b7b5",
+     "deployed_pick": "b7b5",
+     "q_M": -0.8828456076681124
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4000,
+     "raw_pick": "b7b5",
+     "deployed_pick": "b7b5",
+     "q_M": -0.8959961041825213
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16008,
+     "raw_pick": "d8c7",
+     "deployed_pick": "d8c7",
+     "q_M": -0.8989899004831293
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40042,
+     "raw_pick": "d8c7",
+     "deployed_pick": "d8c7",
+     "q_M": -0.9225727046720944
+    }
+   ]
+  },
+  {
+   "fen": "r1bqkb1r/ppp1pppp/2n2n2/3P4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4",
+   "phase": "opening",
+   "M": "f6d5",
+   "cp_M": -37,
+   "S_raw_top": "f6d5",
+   "S_raw_low": "f6d5",
+   "deployed_top": "f6d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.012158314741400167,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 778,
+     "raw_pick": "f6d5",
+     "deployed_pick": "f6d5",
+     "q_M": -0.14040874954425916
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4097,
+     "raw_pick": "f6d5",
+     "deployed_pick": "f6d5",
+     "q_M": -0.08857071146752878
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16051,
+     "raw_pick": "f6d5",
+     "deployed_pick": "f6d5",
+     "q_M": -0.13435493231475482
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40019,
+     "raw_pick": "f6d5",
+     "deployed_pick": "f6d5",
+     "q_M": -0.128250434802859
+    }
+   ]
+  },
+  {
+   "fen": "5k2/5b1p/5Q2/5P2/6PP/1r2r3/8/5K2 w - - 1 66",
+   "phase": "endgame",
+   "M": "f6d6",
+   "cp_M": -48,
+   "S_raw_top": "f6d6",
+   "S_raw_low": "f6d6",
+   "deployed_top": "f6d6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.0,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 210,
+     "raw_pick": "f6d6",
+     "deployed_pick": "f6d6",
+     "q_M": -0.5117568691728749
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 210,
+     "raw_pick": "f6d6",
+     "deployed_pick": "f6d6",
+     "q_M": -0.5117568691728749
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 210,
+     "raw_pick": "f6d6",
+     "deployed_pick": "f6d6",
+     "q_M": -0.5117568691728749
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 210,
+     "raw_pick": "f6d6",
+     "deployed_pick": "f6d6",
+     "q_M": -0.5117568691728749
+    }
+   ]
+  },
+  {
+   "fen": "8/5p2/4p1n1/2Np2kp/3P4/2P5/r4P2/2R2BK1 b - - 6 61",
+   "phase": "middlegame",
+   "M": "g6h4",
+   "cp_M": -199,
+   "S_raw_top": "g6h4",
+   "S_raw_low": "h5h4",
+   "deployed_top": "g6h4",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_findable",
+   "q_M_trend": 0.06640380239361654,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 794,
+     "raw_pick": "h5h4",
+     "deployed_pick": "g6f4",
+     "q_M": -0.8462030660673857
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4039,
+     "raw_pick": "g6f4",
+     "deployed_pick": "g6f4",
+     "q_M": -0.8513408290556457
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16056,
+     "raw_pick": "g6h4",
+     "deployed_pick": "g6h4",
+     "q_M": -0.8442587585425475
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 21122,
+     "raw_pick": "g6h4",
+     "deployed_pick": "g6h4",
+     "q_M": -0.7797992636737692
+    }
+   ]
+  },
+  {
+   "fen": "2rqr1k1/1p2npbp/p3bpp1/3B4/4P3/1NB2P2/PPP2QPP/2KR3R b - - 0 17",
+   "phase": "opening",
+   "M": "e6d5",
+   "cp_M": -61,
+   "S_raw_top": "e6d5",
+   "S_raw_low": "e6d5",
+   "deployed_top": "e6d5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.24288624298395836,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 771,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": -0.42786235756199453
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4048,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": -0.5143890972658643
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16096,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": -0.1291192348508875
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40105,
+     "raw_pick": "e6d5",
+     "deployed_pick": "e6d5",
+     "q_M": -0.18497611457803617
+    }
+   ]
+  },
+  {
+   "fen": "8/p2r2k1/R7/1p6/1PnP4/PB6/7P/7K w - - 3 34",
+   "phase": "endgame",
+   "M": "b3c4",
+   "cp_M": 318,
+   "S_raw_top": "h1g2",
+   "S_raw_low": "b3c4",
+   "deployed_top": "h1g2",
+   "raw_vs_deployed_differ": false,
+   "loss": 27,
+   "decisive": true,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.3666800076358234,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 796,
+     "raw_pick": "b3c4",
+     "deployed_pick": "b3c4",
+     "q_M": 0.9337823096887874
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4110,
+     "raw_pick": "d4d5",
+     "deployed_pick": "h1g2",
+     "q_M": 0.567102302052964
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 8323,
+     "raw_pick": "h1g2",
+     "deployed_pick": "h1g2",
+     "q_M": 0.567102302052964
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 8323,
+     "raw_pick": "h1g2",
+     "deployed_pick": "h1g2",
+     "q_M": 0.567102302052964
+    }
+   ]
+  },
+  {
+   "fen": "r1bqkbnr/pp1p1ppp/2B1p3/2p5/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 4",
+   "phase": "opening",
+   "M": "b7c6",
+   "cp_M": -53,
+   "S_raw_top": "b7c6",
+   "S_raw_low": "b7c6",
+   "deployed_top": "b7c6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.07776036240898862,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 868,
+     "raw_pick": "b7c6",
+     "deployed_pick": "b7c6",
+     "q_M": -0.1431082204314536
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4043,
+     "raw_pick": "b7c6",
+     "deployed_pick": "b7c6",
+     "q_M": -0.10722755318880081
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16091,
+     "raw_pick": "b7c6",
+     "deployed_pick": "b7c6",
+     "q_M": -0.10204206991313983
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40000,
+     "raw_pick": "b7c6",
+     "deployed_pick": "b7c6",
+     "q_M": -0.22086858284044222
+    }
+   ]
+  },
+  {
+   "fen": "r1bqk1nr/pppp1pQp/8/2b1p3/2n1P3/2NP4/PPP2PPP/R1B1K1NR b KQkq - 0 6",
+   "phase": "opening",
+   "M": "d8f6",
+   "cp_M": -33,
+   "S_raw_top": "d8f6",
+   "S_raw_low": "d8f6",
+   "deployed_top": "d8f6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.035903830491888486,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 803,
+     "raw_pick": "d8f6",
+     "deployed_pick": "d8f6",
+     "q_M": -0.07395753742993424
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4057,
+     "raw_pick": "d8f6",
+     "deployed_pick": "d8f6",
+     "q_M": -0.06055260097181708
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16033,
+     "raw_pick": "d8f6",
+     "deployed_pick": "d8f6",
+     "q_M": -0.24972497494121093
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40115,
+     "raw_pick": "d8f6",
+     "deployed_pick": "d8f6",
+     "q_M": -0.10986136792182273
+    }
+   ]
+  },
+  {
+   "fen": "r5r1/5p1k/3p1b1p/qB1PnP2/1NP1R1P1/1R4QP/1P6/1K6 w - - 17 42",
+   "phase": "middlegame",
+   "M": "b1c2",
+   "cp_M": 174,
+   "S_raw_top": "b1c2",
+   "S_raw_low": "b1c2",
+   "deployed_top": "b1c2",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.24146827278548993,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 853,
+     "raw_pick": "b1c2",
+     "deployed_pick": "b1c2",
+     "q_M": 0.6061133220684645
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4011,
+     "raw_pick": "b1c2",
+     "deployed_pick": "b1c2",
+     "q_M": 0.5944830231908221
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 7185,
+     "raw_pick": "b1c2",
+     "deployed_pick": "b1c2",
+     "q_M": 0.36464504928297453
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 7185,
+     "raw_pick": "b1c2",
+     "deployed_pick": "b1c2",
+     "q_M": 0.36464504928297453
+    }
+   ]
+  },
+  {
+   "fen": "rnbqk1nr/ppppB1pp/4p3/5p2/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 0 4",
+   "phase": "opening",
+   "M": "d8e7",
+   "cp_M": -26,
+   "S_raw_top": "d8e7",
+   "S_raw_low": "d8e7",
+   "deployed_top": "d8e7",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.01942128058169071,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 887,
+     "raw_pick": "d8e7",
+     "deployed_pick": "d8e7",
+     "q_M": -0.06791853545225357
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4019,
+     "raw_pick": "d8e7",
+     "deployed_pick": "d8e7",
+     "q_M": -0.06973028606278474
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16000,
+     "raw_pick": "d8e7",
+     "deployed_pick": "d8e7",
+     "q_M": -0.09878840786039982
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40105,
+     "raw_pick": "d8e7",
+     "deployed_pick": "d8e7",
+     "q_M": -0.04849725487056286
+    }
+   ]
+  },
+  {
+   "fen": "3r2k1/4bpp1/1pn1p2p/p3P3/4NP2/PNp3P1/1P5P/2KR4 w - - 0 24",
+   "phase": "middlegame",
+   "M": "d1d8",
+   "cp_M": 35,
+   "S_raw_top": "d1d8",
+   "S_raw_low": "d1d8",
+   "deployed_top": "d1d8",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.007343077221545528,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 830,
+     "raw_pick": "d1d8",
+     "deployed_pick": "d1d8",
+     "q_M": 0.04990118478251856
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4107,
+     "raw_pick": "d1d8",
+     "deployed_pick": "d1d8",
+     "q_M": 0.07190130641157592
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16044,
+     "raw_pick": "d1d8",
+     "deployed_pick": "d1d8",
+     "q_M": 0.03872167876697381
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40037,
+     "raw_pick": "d1d8",
+     "deployed_pick": "d1d8",
+     "q_M": 0.04255810756097303
+    }
+   ]
+  },
+  {
+   "fen": "r1bQkb1r/ppp3pp/2n2n2/5p2/4p3/6P1/PPP1PPBP/RNB1NRK1 b kq - 0 8",
+   "phase": "opening",
+   "M": "c6d8",
+   "cp_M": 11,
+   "S_raw_top": "c6d8",
+   "S_raw_low": "c6d8",
+   "deployed_top": "c6d8",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.06375919437764964,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 791,
+     "raw_pick": "c6d8",
+     "deployed_pick": "c6d8",
+     "q_M": 0.08744808635697991
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4022,
+     "raw_pick": "c6d8",
+     "deployed_pick": "c6d8",
+     "q_M": 0.03698756333277853
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16034,
+     "raw_pick": "c6d8",
+     "deployed_pick": "c6d8",
+     "q_M": 0.027138658700257223
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40044,
+     "raw_pick": "c6d8",
+     "deployed_pick": "c6d8",
+     "q_M": 0.023688891979330273
+    }
+   ]
+  },
+  {
+   "fen": "3rr1k1/1bqnppbp/1p1p2p1/8/2P1PP2/1PNQBB1P/6P1/3RR2K w - - 2 24",
+   "phase": "opening",
+   "M": "c3b5",
+   "cp_M": 86,
+   "S_raw_top": "c3b5",
+   "S_raw_low": "c3b5",
+   "deployed_top": "c3b5",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": -0.006809265310239565,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 819,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": 0.28799853439139284
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4080,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": 0.28371950870117635
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16068,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": 0.2700683118831032
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40109,
+     "raw_pick": "c3b5",
+     "deployed_pick": "c3b5",
+     "q_M": 0.28118926908115327
+    }
+   ]
+  },
+  {
+   "fen": "r2n1r2/pppbnqpk/3p4/3P1pP1/2P2P1p/1NP2B1P/P7/R1BQR1K1 w - - 1 24",
+   "phase": "opening",
+   "M": "c4c5",
+   "cp_M": 228,
+   "S_raw_top": "f3h5",
+   "S_raw_low": "c4c5",
+   "deployed_top": "f3h5",
+   "raw_vs_deployed_differ": false,
+   "loss": 23,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_unstable",
+   "q_M_trend": -0.8321403739334244,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 773,
+     "raw_pick": "c4c5",
+     "deployed_pick": "c4c5",
+     "q_M": 0.8523367039977955
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4087,
+     "raw_pick": "c1e3",
+     "deployed_pick": "c1e3",
+     "q_M": 0.020196330064371097
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16107,
+     "raw_pick": "f3h5",
+     "deployed_pick": "f3h5",
+     "q_M": 0.020196330064371097
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40068,
+     "raw_pick": "f3h5",
+     "deployed_pick": "f3h5",
+     "q_M": 0.020196330064371097
+    }
+   ]
+  },
+  {
+   "fen": "2r2qk1/1p3p1p/4pQpP/3pPP2/p1bR2P1/P7/1P6/K6R b - - 0 32",
+   "phase": "middlegame",
+   "M": "c8c6",
+   "cp_M": -252,
+   "S_raw_top": "c8c6",
+   "S_raw_low": "e6f5",
+   "deployed_top": "c8c6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "depth_findable",
+   "q_M_trend": 0.005744103916685117,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 871,
+     "raw_pick": "e6f5",
+     "deployed_pick": "c8c6",
+     "q_M": -0.9479679520081242
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4045,
+     "raw_pick": "e6f5",
+     "deployed_pick": "e6f5",
+     "q_M": -0.9767998639446839
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16048,
+     "raw_pick": "c8c6",
+     "deployed_pick": "c8c6",
+     "q_M": -0.8813319436796451
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 37678,
+     "raw_pick": "c8c6",
+     "deployed_pick": "c8c6",
+     "q_M": -0.9422238480914391
+    }
+   ]
+  },
+  {
+   "fen": "8/1bNR2pk/1P2pp1p/8/8/5P1P/6PK/1r6 w - - 3 45",
+   "phase": "middlegame",
+   "M": "c7e8",
+   "cp_M": 206,
+   "S_raw_top": "c7e8",
+   "S_raw_low": "c7e8",
+   "deployed_top": "c7e8",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.029540350302207363,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 806,
+     "raw_pick": "c7e8",
+     "deployed_pick": "c7e6",
+     "q_M": 0.7230230208713114
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 2562,
+     "raw_pick": "c7e8",
+     "deployed_pick": "c7e8",
+     "q_M": 0.7525633711735188
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 2562,
+     "raw_pick": "c7e8",
+     "deployed_pick": "c7e8",
+     "q_M": 0.7525633711735188
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 2562,
+     "raw_pick": "c7e8",
+     "deployed_pick": "c7e8",
+     "q_M": 0.7525633711735188
+    }
+   ]
+  },
+  {
+   "fen": "k1r1r3/pp1b1pp1/P2q1n1p/1P1p4/3B4/3QP1P1/4BP1P/2RR2K1 b - - 0 25",
+   "phase": "middlegame",
+   "M": "b7b6",
+   "cp_M": -310,
+   "S_raw_top": "b7b6",
+   "S_raw_low": "b7b6",
+   "deployed_top": "b7b6",
+   "raw_vs_deployed_differ": false,
+   "loss": 0,
+   "decisive": false,
+   "lc0_picks": null,
+   "lc0_found": null,
+   "sf10_eq_M": null,
+   "bucket": "correct_always",
+   "q_M_trend": 0.007921941640047003,
+   "ladder": [
+    {
+     "rung": 768,
+     "realized_evals": 847,
+     "raw_pick": "b7b6",
+     "deployed_pick": "b7a6",
+     "q_M": -0.9600106539001388
+    },
+    {
+     "rung": 4000,
+     "realized_evals": 4091,
+     "raw_pick": "b7a6",
+     "deployed_pick": "b7a6",
+     "q_M": -0.9717080164030943
+    },
+    {
+     "rung": 16000,
+     "realized_evals": 16088,
+     "raw_pick": "b7a6",
+     "deployed_pick": "b7a6",
+     "q_M": -0.9727582519414036
+    },
+    {
+     "rung": 40000,
+     "realized_evals": 40077,
+     "raw_pick": "b7b6",
+     "deployed_pick": "b7b6",
+     "q_M": -0.9520887122600918
+    }
+   ]
+  }
+ ]
+}

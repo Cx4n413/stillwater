@@ -1,0 +1,17 @@
+STILLWATER constant tuning report
+rounds: 10, tuning fitness STS-subset best: 88.93%
+
+param            baseline      tuned
+lcb_k              0.3000     0.0000
+fpu_red            0.2000     0.2200
+ml_thresh          0.8000     0.9000
+cpuct_init         1.7450     2.0450
+cpuct_factor       3.8940     4.8940
+c_var              0.3500     0.2000
+vloss_w            0.8500     0.8500
+pick_k             0.5000     1.1000
+
+full STS-1500:  baseline 85.87%  tuned 86.96%  (delta +1.09)
+WAC-300:        baseline 92.00%  tuned 91.33%  (delta -0.67)
+
+DECISION: SHIP tuned

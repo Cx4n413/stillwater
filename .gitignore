@@ -1,0 +1,43 @@
+# ── build / cache ────────────────────────────────────────────────
+core-rs/target/
+**/__pycache__/
+*.pyc
+*.pyo
+*.swp
+
+# ── runtime state / logs / scratch ───────────────────────────────
+*.log
+*.err
+# runtime proof ledger (regenerated during play)
+proof_ledger.npz
+# TensorRT engine cache (rebuilt on demand)
+nets/trt_cache/
+games/*.pgn
+match_results*
+# one-off per-game analysis scratch
+games/_*
+games/out_*.txt
+games/err_*.txt
+
+# ── third-party binaries (downloaded, not source) ────────────────
+# lc0 engine binary + its onnxruntime.dll
+tools/lc0/
+
+# ── large regenerable / downloadable data (kept on disk, not in repo)
+# 16 GB abandoned rankfeat feature dump
+games/rankfeat/
+*.f16
+games/rank_dataset.jsonl
+games/*.jsonl
+# harvested self-play records (regenerable)
+harvest/
+# 3-4-5 tablebases (downloadable, ~1 GB)
+nets/syzygy/
+
+# ── the GPU venv (lives in the parent dir; guard anyway) ─────────
+sw-gpu-venv/
+
+# ── model weights: shipped via GitHub Releases, NOT git (too large for free LFS)
+# fetch with: tools/fetch_models.ps1  (or: gh release download models-v1 -R Cx4n413/stillwater -D nets)
+nets/*.onnx
+nets/*.pb.gz

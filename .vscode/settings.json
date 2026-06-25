@@ -1,0 +1,5 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.defaultInterpreterPath": "C:\\Users\\nonna\\miniconda3\\python.exe",
+    "python.analysis.extraPaths": ["C:\\Users\\nonna\\miniconda3\\Lib\\site-packages"]
+}
