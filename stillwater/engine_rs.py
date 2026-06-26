@@ -191,6 +191,20 @@ class RustEngine:
         self.risk = float(os.environ.get("STILLWATER_RISK", "0"))
         self.risk_band = float(os.environ.get("STILLWATER_RISK_BAND", "0.10"))
         self.risk_gate = os.environ.get("STILLWATER_RISK_GATE", "always").strip().lower()
+        # SELF-KNOWLEDGE LOSS-TAIL GOVERNOR (STILLWATER_GOVERNOR): the SAFE fragment
+        # of the risk utility -- apply loss-aversion ONLY when WE are clearly ahead
+        # (root value > GOV_AHEAD), where shrinking the give-back tail among
+        # value-band-tied moves is pure upside (it attacks the documented won-game-
+        # drawn-by-3fold conversion leak). This is NOT the blanket-averse posture,
+        # which is MEASURED-NEGATIVE vs strong play (risk_vs_sf.log: averse 33.3%/
+        # 21L vs base 40.2%/14L -- conceding variance in equal/worse positions loses
+        # the grind to the better calculator). theta=0 unless ahead -> off is
+        # byte-identical. Rides the lattice-unique full WDL + our own lead (self-
+        # knowledge); no opponent model, nothing to overfit or transfer.
+        self.governor = os.environ.get("STILLWATER_GOVERNOR", "") not in ("", "0")
+        self.gov_ahead = float(os.environ.get("STILLWATER_GOV_AHEAD", "0.4"))
+        self.gov_k = float(os.environ.get("STILLWATER_GOV_K", "2.0"))
+        self.gov_theta_max = float(os.environ.get("STILLWATER_GOV_MAX", "1.0"))
         self._syzygy_path = _syzygy_dir(syzygy_path)
         self._tb = None
         self.core.set_tunables(
@@ -497,6 +511,15 @@ class RustEngine:
             self._incumbent_uci = cu                  # decisive overtake: follow it
         # else: non-decisive churn -> HOLD the incumbent (the anti-drift)
 
+    def _gov_theta(self, root_value: float) -> float:
+        """Loss-tail aversion strength for the self-knowledge governor: 0 unless we
+        are clearly ahead (root_value > GOV_AHEAD), then ramps with our lead and
+        caps at GOV_MAX. A bounded monotone function of our OWN value only -- nothing
+        to overfit, nothing to transfer, fires only where giving back variance is
+        pure upside."""
+        return min(self.gov_theta_max,
+                   self.gov_k * max(0.0, root_value - self.gov_ahead))
+
     def _best_move(self, board: chess.Board, headroom: int):
         rho = self.opp_model.rho()
         gate_open = rho < RHO_GATE
@@ -616,6 +639,19 @@ class RustEngine:
                     w_l = 1.0 + max(0.0, self.risk)    # averse up-weights losses
                     bp = max(band, key=lambda s: (w_w * s[7] - w_l * s[9],
                                                   s[0], s[2]))
+                    return chess.Move.from_uci(bp[3])
+        if self.governor:
+            # Self-knowledge loss-tail governor: ONLY when clearly ahead, pick the
+            # lowest-loss-tail move among value-band-tied candidates -- pure-upside
+            # variance reduction in won positions, where the engine currently bleeds
+            # points (a won game shuffled into a 3-fold). Identity off / not ahead.
+            theta = self._gov_theta(self.core.root_info()[0][0])
+            if theta > 0.0:
+                qmax = max(s[0] for s in scored)
+                band = [s for s in scored if s[0] >= qmax - self.risk_band]
+                if len(band) > 1:
+                    w_l = 1.0 + theta
+                    bp = max(band, key=lambda s: (s[7] - w_l * s[9], s[0], s[2]))
                     return chess.Move.from_uci(bp[3])
         eps = EPS_BASE * (1.0 - rho) if gate_open else 0.0
         if self.refine_mask & 0x200:

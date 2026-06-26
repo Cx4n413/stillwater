@@ -151,7 +151,14 @@ class UciServer:
 
         def run() -> None:
             kw = dict(stop_event=self.stop_event, info_cb=info_cb)
-            if pondering:
+            force_nodes = os.environ.get("STILLWATER_FORCE_NODES", "")
+            if force_nodes and not pondering:
+                # Clock-free FIXED-NODES mode for clean gauntlets: ignore wtime/btime
+                # entirely and always search exactly N nodes/move -> ZERO time
+                # forfeits (the tc-based flagging that contaminates timed A/Bs).
+                # Pair with tc=inf in cutechess so there is no clock to lose on.
+                kw["node_budget"] = int(force_nodes)
+            elif pondering:
                 # Settle on the opponent's clock; the clock for our reply is
                 # carried so 'ponderhit' starts it without a re-parse.
                 kw["ponder"] = True
