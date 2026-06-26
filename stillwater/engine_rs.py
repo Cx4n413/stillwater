@@ -205,6 +205,28 @@ class RustEngine:
         self.gov_ahead = float(os.environ.get("STILLWATER_GOV_AHEAD", "0.4"))
         self.gov_k = float(os.environ.get("STILLWATER_GOV_K", "2.0"))
         self.gov_theta_max = float(os.environ.get("STILLWATER_GOV_MAX", "1.0"))
+        # THE AQUIFER (STILLWATER_AQUIFER): opening outcome-memory built offline
+        # from the engine's OWN game records (tools/build_aquifer.py). Among
+        # value-admissible opening moves, steer toward the best historically-
+        # realized line for THIS engine+net+search, by a Wilson lower bound (a
+        # cold/thin entry shrinks to baseline -> unseen positions play exactly as
+        # if the book were empty). Pure readout, band-gated -> can never sacrifice
+        # objective value or poison the relaxation/ledger. Byte-identical off. This
+        # is the compounding opening edge a stateless tree search cannot accumulate:
+        # it sharpens with every game the bot plays. Rebuild the book as games grow.
+        self.aquifer_on = os.environ.get("STILLWATER_AQUIFER", "") not in ("", "0")
+        self.aq_ply_max = int(os.environ.get("STILLWATER_AQ_PLY", "20"))
+        self.aq_eps = float(os.environ.get("STILLWATER_AQ_EPS", "0.04"))
+        self.aq_min_games = int(os.environ.get("STILLWATER_AQ_MIN_GAMES", "4"))
+        self._aquifer = None
+        self._aq_wilson = None
+        if self.aquifer_on:
+            try:
+                from . import aquifer as _aqmod
+                self._aquifer = _aqmod.load() or None   # empty/missing -> off
+                self._aq_wilson = _aqmod.wilson_lcb
+            except Exception:
+                self._aquifer = None
         self._syzygy_path = _syzygy_dir(syzygy_path)
         self._tb = None
         self.core.set_tunables(
@@ -550,6 +572,23 @@ class RustEngine:
                 return None
             best = max(moves, key=lambda m: m[1])
             return chess.Move.from_uci(best[0])
+        if self._aquifer is not None and board.ply() <= self.aq_ply_max:
+            # THE AQUIFER: among value-admissible opening moves, steer toward the
+            # one THIS engine has historically scored best with (Wilson lower bound
+            # -> a thin/cold entry shrinks to baseline, so an unseen position plays
+            # exactly as if the book were empty). Band-gated: never sacrifices
+            # objective value; a decisive opening tactic is a singleton band -> no-op.
+            bk = self._aquifer.get(board.epd())
+            if bk:
+                qmax = max(s[0] for s in scored)
+                cands = [(s, bk.get(s[3])) for s in scored
+                         if s[0] >= qmax - self.aq_eps]
+                cands = [(s, stt) for s, stt in cands
+                         if stt is not None and stt[0] >= self.aq_min_games]
+                if len(cands) >= 2:
+                    bp = max(cands,
+                             key=lambda x: self._aq_wilson(x[1][0], x[1][1]))
+                    return chess.Move.from_uci(bp[0][3])
         if self.visit_readout:
             # STRUCTURE LEVER readout (lc0-style). Value-first: among moves whose
             # settled LCB is within a FIXED band of the best (so a decisive tactic

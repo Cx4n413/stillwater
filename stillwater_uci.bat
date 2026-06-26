@@ -28,5 +28,9 @@ set STILLWATER_CPUCT_INIT=2.045
 set STILLWATER_CPUCT_FACTOR=4.894
 set STILLWATER_C_VAR=0.2
 set STILLWATER_PICK_K=1.1
+rem THE AQUIFER: steer value-admissible opening moves toward the engine's own
+rem best-realized lines (compounding outcome-memory; band-gated, safe). Reads
+rem aquifer.npz (rebuild with tools/build_aquifer.py as games accumulate).
+set STILLWATER_AQUIFER=1
 cd /d "%~dp0"
 "C:\Users\nonna\miniconda3\python.exe" -u -m stillwater.uci

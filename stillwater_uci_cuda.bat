@@ -19,5 +19,7 @@ set STILLWATER_CPUCT_INIT=2.045
 set STILLWATER_CPUCT_FACTOR=4.894
 set STILLWATER_C_VAR=0.2
 set STILLWATER_PICK_K=1.1
+rem THE AQUIFER (see stillwater_uci.bat): compounding opening outcome-memory.
+set STILLWATER_AQUIFER=1
 cd /d "%~dp0"
 "C:\Users\nonna\Downloads\sw-gpu-venv\Scripts\python.exe" -u -m stillwater.uci
