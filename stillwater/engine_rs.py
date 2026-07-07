@@ -247,9 +247,13 @@ class RustEngine:
         # MAX-backup over-trusting an over-estimated worst-case reply, tanking good
         # moves. Blend the adopted max toward the children-mean by the winning
         # child's uncertainty (thin -> mean, settled -> max). 0.0 == OFF (byte-id).
-        self.core.set_confback(
-            float(os.environ.get("STILLWATER_CONFBACK_W", "0.0")),
-            float(os.environ.get("STILLWATER_CONFBACK_CAP", "0.0")))
+        # hasattr guard: the live-bot (miniconda) core may be an older build
+        # without this API -- confback is a dead experiment (w=0 default), so a
+        # stale core must never be able to kill the engine at startup.
+        if hasattr(self.core, "set_confback"):
+            self.core.set_confback(
+                float(os.environ.get("STILLWATER_CONFBACK_W", "0.0")),
+                float(os.environ.get("STILLWATER_CONFBACK_CAP", "0.0")))
         if corrector_on:
             try:
                 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
