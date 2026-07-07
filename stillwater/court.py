@@ -24,6 +24,7 @@ EARLY_STOP_P = 0.93    # before soft budget: stop if this confident
 LATE_STOP_P = 0.55     # after soft budget: keep thinking only if truly torn
 EXTEND_FACTOR = 1.6    # how far past soft budget confusion may carry us
 MIN_SPEND = float(os.environ.get("STILLWATER_MIN_SPEND", "0.0"))
+BANK_SPEND = float(os.environ.get("STILLWATER_BANK_SPEND", "0.0"))
 # Verify-draw gate (STILLWATER_VERIFY_DRAW): minimum FRESH, court-directed
 # evals that must re-validate a root DRAW PROOF on the LIVE position before
 # that proof may (a) end deliberation, (b) force min_work, or (c) break the
@@ -196,6 +197,19 @@ class RootCourt:
         horizon = max(24.0, 64.0 - moves_played)
         soft = clock / horizon + 0.8 * inc
         rich = clock > 8.0 * soft
+        # BANK-SPEND (STILLWATER_BANK_SPEND, 2026-07-07): convert a fat clock
+        # into search instead of hoarding it. The live profile: finishing 300+3
+        # games with MORE time than the base clock while the confidence stop
+        # fires in ~1s and the increment refills 3s -- the bank compounds and is
+        # never spent. Scale soft by the surplus over the 8-think luxury line;
+        # self-regulating (burns the bank to sustainable, then boost -> 1) and
+        # flag-safe by construction (hard stays clamped to clock/12 below).
+        if BANK_SPEND > 0.0 and inc > 0 and clock > 8.0 * soft:
+            boost = min(1.0 + BANK_SPEND * (clock / (8.0 * soft) - 1.0), 2.5)
+            # never spend into the reserve: boosted soft keeps >=16 thinks
+            # banked (low clocks where soft is increment-dominated get no
+            # boost at all -- there the old sustainable ration already holds)
+            soft = min(soft * boost, max(soft, clock / 16.0))
         # Safe no-flag cap. The deeper-budget experiment (2.2x/clock9) flagged
         # ~40% of games at 60+1 (0-7-3 over 10) — depth-via-budget is a dead
         # end. The real regression was the CUDA backend's GPU memory leak, not

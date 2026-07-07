@@ -36,5 +36,6 @@ rem COURT FIX (2026-07-07 audit, see stillwater_uci_cuda.bat for details):
 rem spend floor + fresh-evidence stopping confidence.
 set STILLWATER_MIN_SPEND=0.35
 set STILLWATER_FRESH_P=1
+set STILLWATER_BANK_SPEND=0.5
 cd /d "%~dp0"
 "C:\Users\nonna\miniconda3\python.exe" -u -m stillwater.uci
