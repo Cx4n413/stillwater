@@ -21,5 +21,13 @@ set STILLWATER_C_VAR=0.2
 set STILLWATER_PICK_K=1.1
 rem THE AQUIFER (see stillwater_uci.bat): compounding opening outcome-memory.
 set STILLWATER_AQUIFER=1
+rem COURT FIX (2026-07-07 audit): the ceiling match was lost substantially on
+rem blitzed moves (27% of moves <0.5s; 10/12 losing decisions under-thought) and
+rem carried-DAG confidence (3 losing moves reproduce ONLY with the carried
+rem lattice). MIN_SPEND: invest >=35% of the soft budget on any non-lost,
+rem unproven root before a confidence stop. FRESH_P: stopping confidence counts
+rem only THIS move's evals -- carried beliefs steer, they don't testify.
+set STILLWATER_MIN_SPEND=0.35
+set STILLWATER_FRESH_P=1
 cd /d "%~dp0"
 "C:\Users\nonna\Downloads\sw-gpu-venv\Scripts\python.exe" -u -m stillwater.uci

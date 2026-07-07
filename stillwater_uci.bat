@@ -32,5 +32,9 @@ rem THE AQUIFER: steer value-admissible opening moves toward the engine's own
 rem best-realized lines (compounding outcome-memory; band-gated, safe). Reads
 rem aquifer.npz (rebuild with tools/build_aquifer.py as games accumulate).
 set STILLWATER_AQUIFER=1
+rem COURT FIX (2026-07-07 audit, see stillwater_uci_cuda.bat for details):
+rem spend floor + fresh-evidence stopping confidence.
+set STILLWATER_MIN_SPEND=0.35
+set STILLWATER_FRESH_P=1
 cd /d "%~dp0"
 "C:\Users\nonna\miniconda3\python.exe" -u -m stillwater.uci

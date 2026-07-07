@@ -201,6 +201,18 @@ class RustEngine:
         # the grind to the better calculator). theta=0 unless ahead -> off is
         # byte-identical. Rides the lattice-unique full WDL + our own lead (self-
         # knowledge); no opponent model, nothing to overfit or transfer.
+        # FRESH-EVIDENCE COURT (STILLWATER_FRESH_P): the carry-poisoning fix from
+        # the 2026-07-07 audit. p_best fed TOTAL child eval counts, so a root
+        # arriving mid-game with a fat carried DAG looked instantly settled
+        # (p>=0.985 at ~350 fresh evals) and the court snapped -- 10/12 of the
+        # ceiling-match losing decisions were such blitzes, and 3 reproduced ONLY
+        # with the carried lattice (tools/carry_crux.py). With FRESH_P, stopping
+        # confidence counts only evals earned THIS move: carried beliefs still
+        # steer selection (they are good priors) but are hypotheses, not evidence
+        # -- the court must re-buy its certainty on the live position. Forced
+        # moves still snap fast (a huge value gap dominates the wide posterior).
+        self.fresh_p = os.environ.get("STILLWATER_FRESH_P", "") not in ("", "0")
+        self._evals0 = {}
         self.governor = os.environ.get("STILLWATER_GOVERNOR", "") not in ("", "0")
         self.gov_ahead = float(os.environ.get("STILLWATER_GOV_AHEAD", "0.4"))
         self.gov_k = float(os.environ.get("STILLWATER_GOV_K", "2.0"))
@@ -766,12 +778,14 @@ class RustEngine:
             return False
         # Spend-the-bank floor (STILLWATER_MIN_SPEND): forensic game-6 class --
         # a saturated shallow lattice clears the confidence bar in <1s and snaps
-        # a decisive move with the clock full (0.79s, ~640s banked). On a
-        # NON-forced, UNPROVEN, not-clearly-winning root (equal or moderately
-        # worse), invest >= MIN_SPEND*soft before any confidence stop. Proven
-        # theorems and only-moves already returned above; winning roots use the
-        # lens; clearly-lost roots may still snap.
-        if MIN_SPEND > 0.0 and -0.6 < root_value < 0.2 and elapsed < MIN_SPEND * soft:
+        # a decisive move with the clock full (0.79s, ~640s banked). On any
+        # NON-forced, UNPROVEN root that is not clearly lost, invest >=
+        # MIN_SPEND*soft before any confidence stop. Proven theorems and
+        # only-moves already returned above; clearly-lost roots may still snap.
+        # 2026-07-07 audit: window widened from (-0.6, 0.2) to cover WINNING
+        # roots too -- two ceiling-match games collapsed from +3.00 on blitzed
+        # moves the old window exempted (conversion is where SW bleeds points).
+        if MIN_SPEND > 0.0 and root_value > -0.6 and elapsed < MIN_SPEND * soft:
             return False
         early, late = EARLY_STOP_P, LATE_STOP_P
         if lens and hard > 2.0 * soft and 0.2 < root_value < 0.9:
@@ -782,6 +796,11 @@ class RustEngine:
         # only near-certainty stops — speed becomes depth, not idle bank.
         if elapsed < 0.5 * soft:
             early = max(early, 0.985)
+        if self.fresh_p and self._evals0:
+            # Carried evals are priors, not evidence: stopping confidence is
+            # computed from the evals earned THIS move only (see init comment).
+            ns = np.array([max(0, int(n) - self._evals0.get(s[3], 0))
+                           for n, s in zip(ns, scored)])
         p = self.court.p_best(qs, vs, ns)
         if elapsed < soft:
             return p >= early
@@ -802,6 +821,11 @@ class RustEngine:
 
         fen, moves = _split_history(board)
         self.core.set_position(fen, moves)
+        # Fresh-evidence baseline: per-root-child eval counts BEFORE this move's
+        # search. _should_stop subtracts these so carried evals cannot count
+        # toward stopping confidence.
+        self._evals0 = ({c[0]: c[4] for c in self.core.root_children()}
+                        if self.fresh_p else {})
         pending_obs = getattr(self, "_pending_obs", None)
         if pending_obs is not None:
             self._pending_obs = None
