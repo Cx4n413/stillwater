@@ -1,0 +1,134 @@
+[
+ {
+  "round": "2",
+  "fen": "1r6/8/4pkp1/r1p3R1/P4P2/KP6/2R5/8 b - - 4 58",
+  "played": "b8b5",
+  "eval_before": 0.0,
+  "time_spent": 0.38,
+  "M": "b8c8",
+  "sf_best_cp": -200,
+  "sf_played_cp": -374,
+  "cp_loss": 174
+ },
+ {
+  "round": "8",
+  "fen": "5k2/5p2/5K2/5p1p/7P/8/8/8 w - - 0 72",
+  "played": "f6g5",
+  "eval_before": 0.0,
+  "time_spent": 0.4,
+  "M": "f6f5",
+  "sf_best_cp": 0,
+  "sf_played_cp": -8115,
+  "cp_loss": 8115
+ },
+ {
+  "round": "11",
+  "fen": "6k1/7p/1B3P1P/pbn2B2/8/4K3/8/8 b - - 0 53",
+  "played": "b5d7",
+  "eval_before": -0.72,
+  "time_spent": 0.45,
+  "M": "b5d7",
+  "sf_best_cp": -74,
+  "sf_played_cp": -78,
+  "cp_loss": 4
+ },
+ {
+  "round": "12",
+  "fen": "8/3r2p1/8/5k2/7p/7K/8/6R1 w - - 0 77",
+  "played": "g1g2",
+  "eval_before": 0.0,
+  "time_spent": 0.23,
+  "M": "h3h4",
+  "sf_best_cp": 0,
+  "sf_played_cp": -609,
+  "cp_loss": 609
+ },
+ {
+  "round": "13",
+  "fen": "1rr3k1/3bbp2/p1n1p2p/1p2P1pP/3PB3/4BN2/P2K1PP1/1R5R w - - 2 24",
+  "played": "h1c1",
+  "eval_before": -0.79,
+  "time_spent": 2.8,
+  "M": "f3h2",
+  "sf_best_cp": -108,
+  "sf_played_cp": -131,
+  "cp_loss": 23
+ },
+ {
+  "round": "15",
+  "fen": "8/5r1k/3R4/8/8/3P4/5P1K/8 b - - 0 65",
+  "played": "h7h8",
+  "eval_before": 0.0,
+  "time_spent": 0.26,
+  "M": "f7f2",
+  "sf_best_cp": 0,
+  "sf_played_cp": -428,
+  "cp_loss": 428
+ },
+ {
+  "round": "18",
+  "fen": "2b1r1k1/2q2rpn/3p1pNp/p1pP3N/2P1PR1P/1P1Q2R1/6P1/6K1 b - - 80 77",
+  "played": "h7f8",
+  "eval_before": 3.0,
+  "time_spent": 0.41,
+  "M": "c7d8",
+  "sf_best_cp": -75,
+  "sf_played_cp": -444,
+  "cp_loss": 369
+ },
+ {
+  "round": "18",
+  "fen": "r4rk1/1pp3p1/pbnppq1p/4p3/PP2Pn2/2PP1N1P/5PPN/R1BQR1K1 w - - 3 15",
+  "played": "g1h1",
+  "eval_before": 3.0,
+  "time_spent": 2.1,
+  "M": "a1a2",
+  "sf_best_cp": 38,
+  "sf_played_cp": -129,
+  "cp_loss": 167
+ },
+ {
+  "round": "20",
+  "fen": "8/1p3qp1/p1p3k1/P1P2p1p/5K1P/3QPPP1/8/8 b - - 8 79",
+  "played": "f7a2",
+  "eval_before": 0.0,
+  "time_spent": 0.23,
+  "M": "g6h6",
+  "sf_best_cp": -249,
+  "sf_played_cp": -911,
+  "cp_loss": 662
+ },
+ {
+  "round": "22",
+  "fen": "1r4k1/1p3pp1/p2P2np/b4N2/4Q3/5N1P/q4PP1/3R2K1 b - - 3 27",
+  "played": "a5b6",
+  "eval_before": -0.29,
+  "time_spent": 1.2,
+  "M": "a2e6",
+  "sf_best_cp": -108,
+  "sf_played_cp": -142,
+  "cp_loss": 34
+ },
+ {
+  "round": "23",
+  "fen": "8/6k1/8/p2BP3/3n1PKR/8/8/r7 b - - 10 68",
+  "played": "a1g1",
+  "eval_before": -0.88,
+  "time_spent": 4.1,
+  "M": "a1g1",
+  "sf_best_cp": -73,
+  "sf_played_cp": -65,
+  "cp_loss": -8
+ },
+ {
+  "round": "24",
+  "fen": "5bk1/6pp/p2B4/PbPn4/6P1/2R2N1P/2K5/8 b - - 0 36",
+  "played": "d5c3",
+  "eval_before": -0.04,
+  "time_spent": 0.48,
+  "M": "b5a4",
+  "sf_best_cp": -469,
+  "sf_played_cp": -513,
+  "cp_loss": 44
+ }
+]
