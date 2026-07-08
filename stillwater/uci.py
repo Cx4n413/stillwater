@@ -11,6 +11,7 @@ from __future__ import annotations
 import os
 import sys
 import threading
+import time
 
 import chess
 
@@ -61,6 +62,8 @@ class UciServer:
         self.ponder_hit_event = threading.Event()
         self._our_side: bool | None = None   # side we last searched for
         self._build_lock = threading.Lock()  # one engine build at a time
+        if not UciServer._COLD_BOOK:         # entry-path-proof (also in main)
+            UciServer._init_cold_book()
 
     # ----------------------------------------------------------------- engine
 
@@ -100,18 +103,57 @@ class UciServer:
         return Engine(**kwargs)
 
     def _ensure_engine(self) -> Engine:
-        with self._build_lock:
-            if self.engine is None:
-                self.engine = self._make_engine()
-            return self.engine
+        # Options-snapshot validation (2026-07-08): a build started before the
+        # host's setoptions arrive must NOT win the race and leave a stale
+        # default-options engine playing the game. If options changed while
+        # _make_engine ran, discard the result and rebuild.
+        while True:
+            with self._build_lock:
+                if self.engine is not None:
+                    return self.engine
+                snapshot = dict(self.options)
+                eng = self._make_engine()
+                if self.options == snapshot:
+                    self.engine = eng
+                    return eng
+                try:
+                    eng.shutdown()
+                except Exception:
+                    pass
 
     def _build_in_background(self) -> None:
-        """Start loading the oracle now (GUI hosts spawn a fresh engine process
-        per game, and BT4 + DirectML warmup costs 15-25s): building during the
-        uci/option handshake means the first move never pays for it."""
+        """Build the engine (incl. the oracle: _make_engine constructs and
+        warms it -- the 10-15s CUDA/DML session on BT4) off the UCI thread.
+        Anchored on `isready` (all setoptions have arrived by then; a build
+        that races an options change is discarded by _ensure_engine). GUI
+        hosts spawn a fresh engine process per game and opponents abort
+        after ~15-30s of first-move silence, so _go bridges a still-cold
+        engine with an instant book reply instead of blocking."""
         threading.Thread(target=self._ensure_engine, daemon=True).start()
 
     # ----------------------------------------------------------------- search
+
+    @staticmethod
+    def _cold_book_key(board: chess.Board) -> str:
+        return " ".join(board.fen().split()[:2])
+
+    # Instant first-move replies for when `go` arrives while the oracle is
+    # still warming (opponents abort after ~15-30s of first-move silence;
+    # one mainline book move costs ~nothing and caps our response under 3s).
+    _COLD_BOOK: dict[str, str] = {}
+
+    @classmethod
+    def _init_cold_book(cls) -> None:
+        start = chess.Board()
+        cls._COLD_BOOK[cls._cold_book_key(start)] = "d2d4"
+        for first, reply in [("e2e4", "e7e5"), ("d2d4", "g8f6"),
+                             ("c2c4", "e7e5"), ("g1f3", "d7d5"),
+                             ("g2g3", "d7d5"), ("b2b3", "e7e5"),
+                             ("e2e3", "d7d5"), ("b1c3", "d7d5"),
+                             ("f2f4", "d7d5"), ("d2d3", "d7d5")]:
+            b = chess.Board()
+            b.push_uci(first)
+            cls._COLD_BOOK[cls._cold_book_key(b)] = reply
 
     def _go(self, args: list[str]) -> None:
         params: dict[str, float] = {}
@@ -133,9 +175,32 @@ class UciServer:
                 i += 1
             else:
                 i += 1
+        pondering = "ponder" in params
+        # COLD-START GUARD: if the engine is still building (first move of a
+        # fresh process; the oracle session is the 10-15s cost), never make
+        # the opponent wait past its abort window. Grace-wait 2.5s; still
+        # cold -> instant book reply; off-book -> pay the wait (rare: the
+        # book covers ply 0-1 and the build finishes during the opponent's
+        # reply).
+        if self.engine is None and not pondering:
+            t0 = time.monotonic()
+            while self.engine is None and time.monotonic() - t0 < 2.5:
+                time.sleep(0.05)
+            if self.engine is None:
+                bk = self._COLD_BOOK.get(self._cold_book_key(self.board))
+                if bk is not None and chess.Move.from_uci(bk) in self.board.legal_moves:
+                    _print("info string cold-start book reply (engine warming)")
+                    _print(f"bestmove {bk}")
+                    return
+        # FIRST-MOVE THINK CAP: opponents abort on move-one silence (~15-30s),
+        # and with a full clock the court happily thinks 15-25s on ply 0/1 --
+        # theory moves that a 3.5s search plays equally well. Applies to both
+        # the clock path and lichess-bot's explicit first-move movetime.
+        if self.board.ply() <= 1 and not pondering and "nodes" not in params \
+                and "infinite" not in params:
+            params["movetime"] = min(params.get("movetime", 3500.0), 3500.0)
         engine = self._ensure_engine()
         board = self.board.copy()
-        pondering = "ponder" in params
         # On a normal go after the opponent's reply, their move is on the
         # board; on `go ponder` the last move is only our PREDICTION of their
         # reply, so the Effigy must not see it (ponderhit confirms it instead).
@@ -256,10 +321,14 @@ class UciServer:
                 _print("option name Refine type check default false")
                 _print("option name DrawContempt type spin default 0 min 0 max 40")
                 _print("uciok")
-                self._build_in_background()
+                # NOTE: deliberately NO build here -- hosts send setoptions
+                # right after uciok, and a default-options build would either
+                # win the race stale or be discarded (13s of wasted VRAM
+                # churn). isready is the anchor.
             elif cmd == "isready":
-                # Never block the GUI on the oracle load: the build continues
-                # in the background and _go waits on it where it must.
+                # Never block the GUI on the oracle load: build in the
+                # background and reply immediately; _go bridges a cold
+                # engine with the cold-book instant reply.
                 if self.engine is None:
                     self._build_in_background()
                 _print("readyok")
@@ -312,7 +381,10 @@ class UciServer:
         if self.options.get(name) != new:
             self.options[name] = new
             self.engine = None  # rebuild lazily with the new options
-            self._build_in_background()
+            # NO build here: hosts send several setoptions in a burst, and a
+            # build started mid-burst races the rest (stale until the snapshot
+            # check discards it -- wasted 10-15s of session churn). The next
+            # isready (or _go) anchors the rebuild with final options.
 
     def _position(self, rest: list[str]) -> None:
         if not rest:
@@ -349,6 +421,7 @@ class UciServer:
 
 
 def main() -> None:
+    UciServer._init_cold_book()
     UciServer().run()
 
 
