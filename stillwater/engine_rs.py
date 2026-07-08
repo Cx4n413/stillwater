@@ -841,7 +841,20 @@ class RustEngine:
             rvals, rflags = self.core.root_info()
             if rflags[4] and rflags[2] >= 256:        # exists and evals>=256
                 q0 = max(-0.999, min(0.999, rvals[0]))
-        self.core.set_search(rho, self.lens_on, self.draw_contempt, q0)
+        # CONVERSION GUARD (2026-07-08, byte-knight/Ra8 class): in a DECISIVELY
+        # won position a transient belief tank could push every winning
+        # alternative below the flat -0.10 rep floor, making the opponent's
+        # perpetual/shuffle the argmax (drew from mate-in-10 up a queen; the
+        # ceiling match lost 2 games from +3.0 the same way). Deepen contempt
+        # with the advantage: a tank now needs to sink the whole move list
+        # below ~-0.4 to sell a rep in a won game. Symmetric bonus: when dead
+        # lost, saving draws become proportionally MORE attractive. Unchanged
+        # below |q0|=0.6 (the validated regime).
+        eff_contempt = self.draw_contempt
+        if self.draw_contempt > 0.0 and abs(q0) >= 0.6:
+            eff_contempt = min(0.45, self.draw_contempt
+                               + 0.35 * (abs(q0) - 0.6) / 0.4)
+        self.core.set_search(rho, self.lens_on, eff_contempt, q0)
         headroom = 100 - board.halfmove_clock
 
         soft, hard = self.court.budgets(wtime, btime, winc, binc,
