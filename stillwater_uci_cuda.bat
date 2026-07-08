@@ -32,8 +32,10 @@ rem unproven root before a confidence stop. FRESH_P: stopping confidence counts
 rem only THIS move's evals -- carried beliefs steer, they don't testify.
 set STILLWATER_MIN_SPEND=0.35
 set STILLWATER_FRESH_P=1
-rem BANK-SPEND: convert clock surplus into search (live profile was finishing
-rem 300+3 games with MORE than the base clock banked). Self-regulating, flag-safe.
-set STILLWATER_BANK_SPEND=0.5
+rem BANK-SPEND: convert clock surplus into search. OFF for the 100-games/day
+rem push (2026-07-08): it added 5-8 min of OUR clock to every game while the
+rem flat time-curve gains little from it (we held SF18 at ~2s/move without it).
+rem Throughput = games/day; strength cost is minimal by measurement.
+set STILLWATER_BANK_SPEND=0.0
 cd /d "%~dp0"
 "C:\Users\nonna\Downloads\sw-gpu-venv\Scripts\python.exe" -u -m stillwater.uci
