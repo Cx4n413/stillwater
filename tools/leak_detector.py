@@ -10,13 +10,17 @@ for chunk in pgn.split("\n\n\n"):
     g = chess.pgn.read_game(io.StringIO(chunk))
     if g is None or g.headers.get("Result") != "1/2-1/2": continue
     me_white = "stillwater" in g.headers.get("White","").lower()
-    board = g.board(); peak = 0
+    board = g.board(); peak = 0; peak_ply = 0; n = 0
+    diffs = []
     for mv in g.mainline_moves():
-        board.push(mv)
+        board.push(mv); n += 1
         d = sum(VALS[p]*(len(board.pieces(p,chess.WHITE))-len(board.pieces(p,chess.BLACK))) for p in VALS)
         mine = d if me_white else -d
-        peak = max(peak, mine)
-    if peak >= 5:
+        diffs.append(mine)
+        if mine > peak: peak, peak_ply = mine, n
+    # terminal-liquidation mirage filter: a peak only in the last 12 plies is
+    # the opponent cashing out into a drawn ending, not a leak
+    if peak >= 5 and peak_ply <= n - 12:
         flagged.append((g.headers.get("White"), g.headers.get("Black"), peak, g.headers.get("UTCTime")))
 print(f"drawn-from-winning games (peak material >= +5): {len(flagged)}")
 for w,b,p,t in flagged: print(f"  {w} vs {b} | peak +{p} | {t}")
