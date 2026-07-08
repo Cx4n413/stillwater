@@ -20,10 +20,12 @@ set STILLWATER_CPUCT_FACTOR=4.894
 set STILLWATER_C_VAR=0.2
 set STILLWATER_PICK_K=1.1
 rem THE AQUIFER (see stillwater_uci.bat): compounding opening outcome-memory.
-rem AQUIFER PULLED 2026-07-07: indicted by bisect -- the arbiter-mode gauntlet
-rem went delusional ONLY with this flag (arms without it sane). Mechanism not yet
-rem understood -> off everywhere until it is. Re-enable only after root-cause + gate.
-set STILLWATER_AQUIFER=0
+rem AQUIFER EXONERATED 2026-07-08: the 'delusional' gauntlet never executed the
+rem aquifer read (zero EPD overlap between its lichess-keyed book and the
+rem cutechess openings). True culprit: the uci.py options race (fixed 07-08,
+rem snapshot validation) -- a stale default-options engine (StrictDraws=false
+rem under an arbiter) played that match. Re-enabled.
+set STILLWATER_AQUIFER=1
 rem COURT FIX (2026-07-07 audit): the ceiling match was lost substantially on
 rem blitzed moves (27% of moves <0.5s; 10/12 losing decisions under-thought) and
 rem carried-DAG confidence (3 losing moves reproduce ONLY with the carried

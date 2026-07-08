@@ -31,10 +31,12 @@ set STILLWATER_PICK_K=1.1
 rem THE AQUIFER: steer value-admissible opening moves toward the engine's own
 rem best-realized lines (compounding outcome-memory; band-gated, safe). Reads
 rem aquifer.npz (rebuild with tools/build_aquifer.py as games accumulate).
-rem AQUIFER PULLED 2026-07-07: indicted by bisect -- the arbiter-mode gauntlet
-rem went delusional ONLY with this flag (arms without it sane). Mechanism not yet
-rem understood -> off everywhere until it is. Re-enable only after root-cause + gate.
-set STILLWATER_AQUIFER=0
+rem AQUIFER EXONERATED 2026-07-08: the 'delusional' gauntlet never executed the
+rem aquifer read (zero EPD overlap between its lichess-keyed book and the
+rem cutechess openings). True culprit: the uci.py options race (fixed 07-08,
+rem snapshot validation) -- a stale default-options engine (StrictDraws=false
+rem under an arbiter) played that match. Re-enabled.
+set STILLWATER_AQUIFER=1
 rem COURT FIX (2026-07-07 audit, see stillwater_uci_cuda.bat for details):
 rem spend floor + fresh-evidence stopping confidence.
 set STILLWATER_MIN_SPEND=0.35
