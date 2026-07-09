@@ -506,6 +506,22 @@ class RustEngine:
         enemy = not win
         z = board.is_zeroing(m)
         chk = board.gives_check(m)
+        # SIMPLIFICATION CREDIT (2026-07-09, the M10 fix): in won 8-14 man
+        # positions the net's value saturates (~+0.97 for every move) and the
+        # 3x-budget premise gate proved search cannot rank mate lines (KILL,
+        # 1/5). The winning gradient that exists is STRUCTURAL: trade pieces
+        # toward the 7-man floor where the live lichess EGTB plays perfectly.
+        # Within the value-vetted band, credit captures -- pieces over pawns,
+        # and more as the trade approaches tablebase territory. Zeroing (+8)
+        # never distinguished a queen trade from a pawn nudge; this does.
+        men = chess.popcount(board.occupied)
+        simplify = 0.0
+        if men <= 14 and board.is_capture(m):
+            victim = board.piece_type_at(m.to_square)   # None => en passant
+            if victim is not None and victim != chess.PAWN:
+                simplify = 10.0 + 1.5 * max(0, 14 - (men - 1))
+            else:
+                simplify = 3.0
         board.push(m)
         try:
             if board.is_checkmate():
@@ -521,7 +537,7 @@ class RustEngine:
         finally:
             board.pop()
         return (-4.0 * edge) + (-1.0 * kk) + (-0.25 * enemy_mob) \
-            + (8.0 if z else 0.0) + (2.0 if chk else 0.0)
+            + (8.0 if z else 0.0) + (2.0 if chk else 0.0) + simplify
 
     def _update_incumbent(self):
         """Maintain the conviction INCUMBENT during the search: the LCB-argmax once

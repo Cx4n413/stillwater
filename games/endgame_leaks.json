@@ -1,0 +1,37 @@
+[
+ {
+  "opp": "PeachFruit",
+  "mv": 56,
+  "fen": "1r6/7p/1P6/P4b2/5P2/3k3p/2p2K2/6R1 b - - 3 56",
+  "played": "b8g8",
+  "men": 11
+ },
+ {
+  "opp": "PeachFruit",
+  "mv": 59,
+  "fen": "8/3R3p/1P6/P7/5P2/3k3p/5K2/2q5 b - - 0 59",
+  "played": "d3e4",
+  "men": 9
+ },
+ {
+  "opp": "TroutBot",
+  "mv": 45,
+  "fen": "8/8/2k1p3/4Q1K1/P3b3/3p1q2/1P3b2/8 b - - 5 45",
+  "played": "f2e3",
+  "men": 10
+ },
+ {
+  "opp": "rudim-bot",
+  "mv": 54,
+  "fen": "2N5/p5p1/P4p1p/5P1P/4P1P1/1r6/4k3/7K b - - 0 54",
+  "played": "e2f3",
+  "men": 13
+ },
+ {
+  "opp": "rudim-bot",
+  "mv": 74,
+  "fen": "8/8/5N1p/5P1P/6K1/r7/5k2/8 b - - 8 74",
+  "played": "a3a4",
+  "men": 7
+ }
+]
