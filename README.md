@@ -4,7 +4,7 @@ STILLWATER is a chess engine with **no game tree**. There is no alpha-beta,
 no depth-first iterative deepening, no MCTS rollouts, no visit counts, no
 PUCT descent-and-backup. 
 
-I can't be bothered to write a description of all of its parts at the moment.
+I can't be bothered to write a description of all of its parts at the moment. I posted a slightly more detailed version of its contents [here](https://www.reddit.com/r/ComputerChess/comments/1uqyjqj/an_entirely_new_kind_of_chess_engine_with_no_tree/)
 
 ## Run it
 
